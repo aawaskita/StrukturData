@@ -181,7 +181,7 @@ Algoritma sendiri dapat didefinisikan sebagai urutan instruksi yang harus diikut
 
 \chapter{Bahasa Pemrograman C++}
 \section{Pendahuluan}
-Bahasa pemrograman \texttt{C++} dipilih dalam diktat ini karena \texttt{C++} secara eksplisit memanfaatkan pointer sebagai sarana membangun beragam struktur data. Sementara bahasa pemrograman lain yang lebih modern telah mengemas hal tersebut ke dalam class. Sebagai bahan ajar, \texttt{C++} dinilai lebih mampu memberikan pemahaman tentang merancang dan menerapkan rancangan struktur data ketimbang hanya menggunakan class yang telah terdefinisi dengan baik. Program \ref{hellocpp} memperlihatkan program sederhana \texttt{C++}.
+Bahasa pemrograman \texttt{C++} dipilih dalam diktat ini karena \texttt{C++} secara eksplisit memanfaatkan \textit{pointer} sebagai sarana membangun beragam struktur data. Sementara bahasa pemrograman lain yang lebih modern telah mengemas hal tersebut ke dalam class. Sebagai bahan ajar, \texttt{C++} dinilai lebih mampu memberikan pemahaman tentang merancang dan menerapkan rancangan struktur data ketimbang hanya menggunakan class yang telah terdefinisi dengan baik. Program \ref{hellocpp} memperlihatkan program sederhana \texttt{C++}.
 
 \scriptsize
 \begin{lstlisting}[language=c++, numbers=left, numberstyle=\tiny, caption=hello.cpp, showstringspaces=false, label=hellocpp]
@@ -201,14 +201,75 @@ Penjelasannya adalah sebagai berikut.
 \item Baris ke-2, digunakan untuk menyederhanakan penulisan fungsi. Karena \texttt{C++} adalah bahasa pemrograman berorientasi obyek, setiap fungsi tentu terdefinisi di dalam class tertentu, sehingga pemanggilan terhadap fungsi \texttt{cout} dilakukan apa adanya. Sebaliknya, tanpa deklarasi ini pemanggilan fungsi \texttt{cout} harus dilakukan dengan cara \texttt{std::cout}.
 \item Baris ke-4, setiap program berbasis \texttt{C/C++} akan dieksekusi dari fugnsi yang bernama \texttt{main}. Tanpa fungsi ini, program \texttt{C/C++} tidak dapat dieksekusi (proses kompilasi tidak dapat menghasilkan \textit{executable file}).
 \item Baris ke-5, digunakan untuk menampilkan teks berupa "Hello World" ke layar.
-\item Setiap fungsi dalam \texttt{C/C++} dimulai oleh karakter "\{" dan diakhiri oleh karakter "\}".
+\item Baris ke-6, digunakan untuk memenuhi syarat berupa \textit{return value} dari fungsi main (Baris ke-4). Biasanya, fungsi yang mengembalikan nilai $0$ disepakati sebagai fungsi yang menjalankan tugas dengan baik. Jika tidak ingin melakukan pengembalian fungsi, maka fungsi \texttt{main} harus diberi tanda \textit{return value} sebagai \texttt{void}.
+\item Setiap fungsi dalam \texttt{C/C++} dimulai oleh karakter "\{" dan diakhiri oleh karakter "\}", dan setiap instruksi di akhiri dengan karakter ";".
+\item Di terminal, jalankan perintah \texttt{g++ -o hello hello.cpp}, dengan penjelasan.
+\begin{itemize}
+\item \texttt{g++}: memanggil aplikasi kompilator \texttt{C++}
+\item \texttt{-o}: opsi untuk melakukan kompilasi dan \textit{linking} (meski dalam konteks Program \ref{hellocpp} tidak diperlukan) sehingga dihasilkan \textit{executable file}.
+\item \texttt{hello}: nama executable file, jika dijalankan di Microsoft Windows dengan bantuan aplikasi MinGW, secara otomatis ditambahkan ekstensi \texttt{.exe}.
+\item \texttt{hello.cpp}: kode sumber yang akan dikompilasi
+\end{itemize}
 \end{enumerate}
 
 \section{IDE}
-IDE (\textit{Integrated Development Environment}) adalah aplikasi yang digunakan dalam mengembangkan program. Untuk tujuan mempelajari materi struktur data, sebenarnya nyaris tidak diperlukan IDE. Kita hanya perlu memiliki kompilator \textit{C++} sebagai bahasa pemrograman yang memiliki notasi eksplisit terkait pointer (dijelaskan dalam sub bab \ref{sec:pointer}) serta editor teks untuk menulis sejumlah instruksi \texttt{C++}. Untuk pengguna sistem operasi GNU Linux, nyaris semua jenis kompilator tersedia secara gratis. Namun, tidak demikian halnya dengan pengguna sistem Operasi Microsoft Windows.
+IDE (\textit{Integrated Development Environment}) adalah aplikasi yang digunakan dalam mengembangkan program. Untuk tujuan mempelajari materi struktur data, sebenarnya nyaris tidak diperlukan IDE. Kita hanya perlu memiliki kompilator \textit{C++} sebagai bahasa pemrograman yang memiliki notasi eksplisit terkait \textit{pointer} (dijelaskan dalam sub bab \ref{sec:pointer}) serta editor teks untuk menulis sejumlah instruksi \texttt{C++}. Untuk pengguna sistem operasi GNU/Linux dalam berbagai variannya, nyaris semua jenis kompilator tersedia secara gratis. Saya sendiri menggunakan editor teks Geany\footnote{\url{https://www.geany.org/}} dengan kompilator \texttt{C++} dari GNU \textit{Project}.
+
+Namun, tidak demikian halnya dengan pengguna sistem Operasi Microsoft Windows. Umumnya, aplikasi di sistem operasi ini dikemas secara terintegrasi, bahkan dengan asumsi kita sedang berhadapan dengan sebuah proyek besar yang butuh cara mengelola proyek (dalam hal ini \textit{software}) yang mumpuni. Padahal, di sisi lain, kita hanya memerlukan editor teks tempat di mana kita menyusun program serta kompilator yang akan membuat program tersebut dapat dijalankan. Beruntung, ada sejumlah aplikasi yang dapat memberikan kita lingkungan pengembangan yang sederhana seperti halnya di sistem operasi GNU/Linux. Misalnya dengan aplikasi MinGW (Minimalist GNU for Windows)\footnote{\url{http://www.mingw.org/}} atau Cygwin\footnote{\url{https://www.cygwin.com/}}. Jangan lupa untuk memasang kompilator \texttt{C++} pada keduanya. Untuk yang masih kesulitan menggunakan aplikasi berbasis perintah baris seperti pada MinGW dan Cygwin, dapat menggunakan aplikasi IDE yang canggih seperti Visual Studio atau NetBeans dengan \textit{plugin} kompilator \texttt{C/C++}.
 
 \section{Tipe data \texttt{pointer} dan \texttt{struct}}
 \label{sec:pointer}
+Tipe data \textit{pointer} adalah salah satu tipe data yang didefinisikan di \texttt{C/C++}. Tugasnya untuk menunjuk lokasi memori yang menjadi perhatian. Tipe data ini, tidak untuk menyimpan nilai suatu variabel tetapi alamat memori secara fisik di mana suatu nilai disimpan. Meskipun hanya bertugas menunjuk, tetapi tipe datanya harus disesuaikan dengan nilai yang akan ditunjuk. 
+
+Sebagai contoh, untuk mendefinisikan sebuah variabel \textit{integer}, \texttt{C/C++} memiliki sintaks \texttt{int a;}. Untuk membuat sebuah tipe data \textit{pointer} yang akan menunjuk variabel bertipe \textit{integer}, \texttt{C/C++} memiliki sintaks \texttt{int *p;}. Sedangkan untuk membuat \textit{pointer} \texttt{p} menunjuk variabel \texttt{a}, \texttt{C/C++} memilki sintaks \texttt{p=\&a;}. Proses \textit{assignment} tersebut juga dapat dilakukan sekaligus pada saat deklarasi dengan sintaks \texttt{int *p=\&a;}. Intinya, tipe data \textit{pointer} dicirikan dengan karakter "\texttt{*}" di awal variabel dan mengikuti variabel yang ditunjuk. Jika akan digunakan menunjuk vairabel \textit{integer}, maka \textit{pointer} juga harus dideklarasikan sebagai \textit{integer}.
+
+Kemudian, ada tipe data lainnya yang bertugas untuk mengemas sejumlah tipe data yang telah terdefinisi dalam \texttt{C/C++} yang disebut sebagai \texttt{struct}. Tipe data ini memungkinkan kita membuat tipe data baru yang mirip dengan sebuah obyek tanpa fungsi, karena hanya memiliki atribut. Sekali diacu dalam program, maka kita dapat mengakses semua data yang dikemas dalam \texttt{struct}. Program \ref{pointerstruct} mengilustrasikan penggunaan variabel \texttt{pointer} dan \texttt{struct}.
+
+\scriptsize
+\begin{lstlisting}[language=c++, numbers=left, numberstyle=\tiny, caption=intro.cpp, showstringspaces=false, label=pointerstruct]
+#include <iostream>
+using namespace std;
+
+typedef struct data {
+	int nilai;
+	struct data *pointer;
+}DATA;
+
+int main() {
+	int a;
+	a=10;
+	int *p;
+	p=&a;
+	DATA x;
+	x.nilai=7;
+	x.pointer=NULL;
+	
+	cout << "Nilai variabel a adalah " << a << " dan berlokasi di alamat " << &a << endl;
+	cout << "Nilai variabel *p adalah " << *p << " dan berlokasi di alamat " << p << endl;
+	cout << "x.nilai=" << x.nilai << ", x.pointer merujuk ke alamat " << x.pointer << endl;
+	return 0;
+}
+\end{lstlisting}
+\normalsize
+
+Penjelasannya adalah sebagai berikut.
+\begin{enumerate}
+\item Baris ke-4 s/d 7: definisi tipe data baru berupa \texttt{struct data}. Pernyataan \texttt{typedef} di depannya menunjukkan bahwa tipe data \texttt{struct data} memiliki nama alias \texttt{DATA}. Itu sebabnya di baris ke-4 tertulis \texttt{DATA} yang berarti nama alias untuk \texttt{struct data}.
+\begin{itemize}
+\item Baris ke-5: definisi penyusun pertama \texttt{struct data}, yaitu \texttt{int nilai;}.
+\item Baris ke-6: definisi penyusun kedua \texttt{struct data}, yaitu \texttt{struct data *pointer;}. Karena penyusun kedua ini ditugaskan untuk menujukan variabel dengan tipe \texttt{struct data}, maka ia harus didefinisikan dengan tipe yang sama.
+\end{itemize}
+\item Baris ke-10 dan 11: deklarasi dan \textit{assignment} variabel \textit{integer} dengan nama \texttt{a} dan dengan nilai \texttt{10}.
+\item Baris ke-12 dan 13: deklarasi dan \textit{assignment} variabel \texttt{pointer} dengan nama \texttt{*p} dan bernilai \texttt{\&a} (alamat dari variabel \texttt{a} yang disimpan di RAM). 
+\item Baris ke-14: deklarasi variabel \texttt{DATA} dengan nama \texttt{x}. Perhatikan kembali cara mendeklarasi variabel di baris ke-10 dan 12.
+\item Baris ke-15 dan 16: \textit{assignment} nilai elemen penyusun variabel \texttt{x}, yaitu
+\begin{itemize}
+\item \texttt{x.nilai=7}
+\item \texttt{x.pointer=NULL}: \texttt{pointer} belum menunjuk ke variabel apapun yang bertipe \texttt{DATA}.
+\end{itemize}
+\item Baris ke-18 s/d 20: menuliskan nilai-nilai yang sebelumnya di-\textit{assign} ke variabel untuk ditampilkan di layar.
+\item Baris tanpa penjelasan memiliki penjelasan yang sama dengan penjelasan Program \ref{hellocpp}.
+\end{enumerate}
 
 \bibliographystyle{apalike}
 \bibliography{reference}

@@ -24,9 +24,8 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass{book}
+\documentclass{report}
 
-\newcommand*{\plogo}{\fbox{$\mathcal{PL}$}} % Generic publisher logo
 \usepackage{cite,graphicx}
 \usepackage[chapter]{algorithm}
 \usepackage{url,float}
@@ -43,7 +42,7 @@
 \renewcommand{\chaptername}{BAB}
 \renewcommand{\figurename}{\bo{Gambar}}
 \renewcommand{\tablename}{\bo{Tabel}}
-
+\include{hype.indonesia}
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
@@ -60,6 +59,11 @@
 {\large \textsc{Dr. Arya Adhyaksa Waskita}} % Author name
 
 \vspace{0.5\textheight} % Whitespace between the title block and the publisher
+\begin{figure}[H]
+\includegraphics[scale=.2]{pics/logo.png}
+\end{figure}
+STMIK Eresha - 2017
+
 %{\noindent The Publisher \plogo}\\[\baselineskip] % Publisher and logo
 }}
 \endgroup}
@@ -73,32 +77,114 @@
 %\addChapter{\kataPengantar}
 
 
-%\pagestyle{empty} % Removes page numbers
+\pagestyle{empty} % Removes page numbers
 
 \titleGM % This command includes the title page
+\pagenumbering{roman}
+\setcounter{page}{0}
 \tableofcontents
 \listoffigures
 \lstlistoflistings
-
 \include{pengantar}
+
+\pagenumbering{arabic}
 \chapter{Pendahuluan}
 Memanfaatkan komputer dalam menyelesaikan suatu masalah menuntut pengetahuan tentang transformasi masalah tersebut agar dapat diselesaikan dengan komputer. Materi struktur data digunakan untuk memahami transfromasi data yang terlibat dalam suatu masalah serta operasi yang berlaku pada data sehingga dapat diselesaikan dengan komputer. Transformasi tersebut tentang bagaimana data diorganisasikan, dikendalikan serta struktur yang harus dirancang dan diterapkan. Targetnya adalah sebuah solusi yang sederhana dan efisien.
 
 \section{Representasi data}
-Dalam komputer, data dan instruksi direpresentasikan dalam bentuk biner, berupa susunan angka $0$ dan $1$ dengan arti tertentu. Susunan 8 \texttt{bit} biner disebut dengan \texttt{byte} digunakan untuk merepresentasikan karakter. Sedangkan kumpulan karakter akan menjadi string. Ilustrasinya ditunjukkan pada Gambar %\ref{fig:dataRep}.
+Dalam komputer, data dan instruksi dinyatakan dalam bentuk biner, berupa susunan angka $0$ dan $1$ dengan arti tertentu. Susunan 8 \texttt{bit} biner disebut dengan \texttt{byte} digunakan untuk merepresentasikan karakter. Sedangkan kumpulan karakter akan menjadi string. Ilustrasinya ditunjukkan pada Gambar \ref{fig:dataRep}.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=.5]{pics/dataRepresentation.png}
+\includegraphics[scale=.45]{pics/dataRepresentation.png}
 \caption{Representasi data dalam komputer}
 \label{fig:dataRep}
 \end{figure}
 
+Acuan dalam merepresentasikan data ke dalam sistem biner antara adalah ASCII (\textit{American Standard Code for Information Interchange}) dan BCD (\textit{binary-coded decimal}). Dan setiap bahasa pemrograman telah mendefinisikan representasi untuk perintah dan data yang digunakannya seperti ilustrasi pada Gambar \ref{fig:dataRep}. Setiap jenis data memiliki skema representasi yang berbeda. Representasi data integer dilakukan menggunakan 8 bit (1 byte) biner. Misalnya, $27$ dinyatakan dalam bilangan biner sebagai $00011011$. Sementara untuk menyatakan bilangan negatifnya, dapat dilakukan dengan dua pendekatan. Yang pertama adalah melakukan operasi komplemen pada setiap bit biner, yaitu setiap bit $0$ diubah menjadi $1$, sedangkan bit $1$ menjadi $0$. Dengan demikian, angka $-27$ jika dinyatakan dalam biner dengan operasi komplemen menjadi $11100100$. Sedangkan representasi yang kedua adalah menambahkan angka $1$ pada hasil operasi komplemen pertama. Sehingga angka $-27$ dapat dinyatakan dalam bilangan biner dengan skenario kedua sebagai $11100101$.
+
+Selan itu, bilangan desimal dapat juga dinyatakan dalam bilangan biner dengan terlebih dahulu memisahkan bagian bilangan bulat (mantissa) dengan bagian pangkat (eksponen)nya. Sebagai contoh, bilangan $209.52$ dapat dinyatakan sebagai $20952.10^{-2}$ dalam bilangan basis $10$. $20952$ adalah bagian mantissa, sedangkan $-2$ adalah bagian eksponennya. Dengan skenario sebelumnya, angka $20952$ dinyatakan dalam biner sebagai $101000111011$. Sedangkan bagian eksponennya dinyatakan dalam skenario komplemen sebagai $11111101$. Sehingga keduanya dapat digunakan untuk menyatakan bilangan $20952.10^{-2}$ sebagai $101000111011$.$11111101$.
+
+\section{Tipe data abstrak}
+Pada kondisi tertentu, kita tidak dapat (sulit) merepresentasikan data atau obyek ke dalam komputer. Pada kondisi tersebut, bukan saja data yang perlu disimpan, tetapi operasi matematika yang berlaku pada data tersebut. Datanyapun seringkali berupa data jamak dari tipe yang berbeda. Bahasa pemorgraman modern menyebut tipe data ini sebagai tipa data abstrak (ADT/\textit{Abstract Data Type}) yang muncul dalam bahasa pemrograman berorientasi obyek.
+
+Untuk kasus yang lebih sederhana, di mana fokus utamanya justru pada sejumlah data yang perlu diacu bersama di saat yang sama, kita mengenal tipe data \texttt{structure}. Di sini, kita dapat mendefinisikan satu tipe data baru yang terdiri dari sejumlah tipe data yang telah didefinisikan dalam bahasa pemrograman yang kita gunakan. 
+
+Terdapat dua istilah terkait tipe data ini. Selain data struktur yang merupakan data yang tersusun dari sejumlah elemen data, terdapat juga tipe struktur \textit{structured type}. \textit{Structure type} merupakan hubungan yang terdapat pada data (elemen). Jika data struktur fokus pada data dengan elemen lebih dari satu, \textit{structured type} fokus pada hubungan antar data.
+
+Dapat disimpulkan bahwa ADT merupakan spesifikasi, sementara tipe data adalah penerapan dari ADT. ADT dapat juga dipandang sebagai merupakan bentuk umum dari tipe data. Jika telah didefinisikan dalam bahasa pemrograman tertentu sering disebut sebagai \textit{primitive data type}, sedangkan jika didefinisikan oleh pengguna disebut sebagai \textit{user defined data type}. Sementara data struktur adalah kumpulan data dengan tipe apapun. Hubungannya dapat diilustrasikan dalam Gambar \ref{fig:datatype} berikut.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.5]{pics/datatype.png}
+\caption{Hubungan tipe data}
+\label{fig:datatype}
+\end{figure} 
+
+\section{Prinsip dasar pemrograman}
+Prinsip dasar dalam pemrograman tahapan yang harus dilakukan dalam menyelesaikan masalah menggunakan bantuan komputer. Salah satu tahapan dalam pemrograman terstruktur dikenal sebagai \textit{system development life cycle} (SDLC). Tahapan SDLC adalah sebagai berikut.
+\begin{enumerate}
+\item Analisis masalah: apa yang menjadi masalah, apa saja solusinya, apa dan siapa (pemrograman berorientasi obyek) yang terlibat, tahapan dalam penyelelesaian, indikasi keberhasilan, dll.
+\item Membuat \textit{prototype}, umunya dilakukan dalam bentuk \textit{pseduo code} atau diagram alir.
+\item Membangun algoritma:
+\begin{itemize}
+\item merancang \label{sec:rancangan}
+\item verifikasi
+\item analisis
+\item memprogram
+\begin{itemize}
+\item menguji
+\item evaluasi
+\item perbaikan (jika perlu)
+\item optimasi
+\end{itemize}
+\item Merawat
+\end{itemize}
+\end{enumerate}
+
+Dalam merancang algoritma (termasuk juga program yang menerapkan algoritma) seperti disebutkan dalam tahapan ke-\ref{sec:rancangan} dari SDLC, diperlukan tahapan berikut.
+\begin{enumerate}
+\item Program harus sejalan dengan masalah yang dihadapi, apakah itu prosedur, data maupun struktur datanya.
+\item Bekerja baik pada semua kondisi di mana masalah terjadi. Jika ada kondisi di mana solusi yang digunakan tidak dapat mencapai hasil yang diinginkan, kondisi tersebut menjadi pengecualian dan harus disebutkan secara eksplisit.
+\item Dokumentasi tentang bagaimana rancangan tersebut dihasilkan (dokumentasi rancangan)
+\item Tersusun atas sejumlah modul, fungsi, subrutin. Modularisasi menjadi penting ketika algoritma yang dibangun komplek dan besar. Modularisasi akan memberikan keuntungan dari kemudahan pengembangan.
+\item Waktu eksekusi dan ruang penyimpanan yang diperlukan. Kedua hal ini adalah kriteria sebuah algoritma disebut baik. Kebutuhan media penyimpanan yang dimaksud di sini meliputi media yang bersifat \textit{volatile} (\textit{Random Access Memory}/RAM) atau \textit{non-volatile} (\textit{hard disk}). Sementara waktu eksekusi tentu akan berbeda ketika dijalankan di mesin yang berbeda, sehingga ukuran tepatnya adalah jumlah operasi aritmatika dan logika yang dijalankan sebuah algoritma. Nilainya dinotasikan sebagai $\Theta$ atau \textbf{O}. Nilai notasi $\Theta$ untuk beragam struktur data dan algoritmanya diilustasikan pada Gambar \ref{fig:bigOh}\footnote{\url{http://bigocheatsheet.com/}}.
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.45]{../CommonDS.png}
+\caption{Perbandingan nilai $\Theta$ sejumlah struktur data dan algoritma}
+\label{fig:bigOh}
+\end{figure}
+
+Algoritma yang dirancang selanjutnya dianalisis kinerjanya dalam bentuk waktu eksekusi. Selain dipengaruhi oleh mesin di mana algoritma dijalankan, waktu eksekusi juga dipengaruhi oleh masukannya. Sebagai ilustrasi, mengurutkan sejumlah nilai yang telah terurut sebelumnya tentu membutuhkan waktu yang lebih singkat dibanding dengan nilai-nilai yang belum terurut. Waktu eksekusi yang dipengaruhi masukan dapat dikelompokkan dalam 3 kategori.
+\begin{enumerate}
+\item \textit{Best}: waktu minimum yang diperlukan sebuah algoritma.
+\item \textit{Average}: waktu rerata dari eksekusi sebuah algoritma dalam menyelesaikan masalah yang sama dengan masukan yang berbeda. Jika satu masalah memiliki kemungkinan masukan sebanyak $n$, maka waktu rerata adalah rata-rata dari waktu untuk menyelesaikan masalah dengan $n$ masukan tersebut. Jika waktu untuk menyelesaikan algoritma untuk satu jenis masukan adalah $T_i$, maka waktu rerata ($T_{avg}$) dapat diformulasikan dalam persamaan (\ref{eq:tavg}).
+\item \textit{Worst}: waktu terburuk sebuah algoritma dalam mengolah satu jenis masukan. 
+\end{enumerate}
+
+\begin{equation}
+T_{avg}=\frac{\sum_{i=1}^{n}T_i}{n}
+\label{eq:tavg}
+\end{equation}
+
+Algoritma sendiri dapat didefinisikan sebagai urutan instruksi yang harus diikuti untuk menyelesaikan suatu masalah. Atau dapat juga didefinisikan sebagai prosedur untuk mengubah \textit{input} menjadi \textit{output}. Karakteristik algoritma yang baik adalah sebagai berikut.
+\begin{enumerate}
+\item Setiap instruksi di dalamnya harus unik dan tepat.
+\item Setiap instruksi tidak boleh dijalankan secara berulang tanpa batas.
+\item Perulangan tugas yang sama harus dihindari
+\item Harus memberikan hasil yang tepat untuk masalah yang dihadapi
+\item Efisien dalam menyelesaikan masalah. Faktor efisiensi seperti yang telah disebutkan terdiri dari efisiensi terkait media penyimpanan dan waktu eksekusi.
+\end{enumerate} 
+
 \chapter{Bahasa Pemrograman C++}
 \section{Pendahuluan}
+Bahasa pemrograman \texttt{C++} dipilih dalam diktat ini karena \texttt{C++} secara eksplisit memanfaatkan pointer sebagai sarana membangun beragam struktur data. Sementara bahasa pemrograman lain yang lebih modern telah mengemas hal tersebut ke dalam class. Sebagai bahan ajar, \texttt{C++} dinilai lebih mampu memberikan pemahaman tentang merancang dan menerapkan rancangan struktur data ketimbang hanya menggunakan class yang telah terdefinisi dengan baik. Program \ref{hellocpp} memperlihatkan program sederhana \texttt{C++}.
 
 \scriptsize
-\begin{lstlisting}[language=c++, numbers=left, numberstyle=\tiny, caption=hello.cpp, showstringspaces=false, label=placeholder]
+\begin{lstlisting}[language=c++, numbers=left, numberstyle=\tiny, caption=hello.cpp, showstringspaces=false, label=hellocpp]
 #include <iostream>
 using namespace std;
 
@@ -109,7 +195,22 @@ int main() {
 \end{lstlisting}
 \normalsize
 
+Penjelasannya adalah sebagai berikut.
+\begin{enumerate}
+\item Baris ke-1, merupakan pemanggilan pustaka di mana fungsi-fungsi yang digunakan dalam program diletakkan. Dalam contoh Program \ref{hellocpp}, digunakan fungsi \texttt{cout} yang digunakan untuk menampilkan data ke \textit{standard output} (layar) dan fungsi tersebut didefinisikan di pustaka \texttt{iostream}.
+\item Baris ke-2, digunakan untuk menyederhanakan penulisan fungsi. Karena \texttt{C++} adalah bahasa pemrograman berorientasi obyek, setiap fungsi tentu terdefinisi di dalam class tertentu, sehingga pemanggilan terhadap fungsi \texttt{cout} dilakukan apa adanya. Sebaliknya, tanpa deklarasi ini pemanggilan fungsi \texttt{cout} harus dilakukan dengan cara \texttt{std::cout}.
+\item Baris ke-4, setiap program berbasis \texttt{C/C++} akan dieksekusi dari fugnsi yang bernama \texttt{main}. Tanpa fungsi ini, program \texttt{C/C++} tidak dapat dieksekusi (proses kompilasi tidak dapat menghasilkan \textit{executable file}).
+\item Baris ke-5, digunakan untuk menampilkan teks berupa "Hello World" ke layar.
+\item Setiap fungsi dalam \texttt{C/C++} dimulai oleh karakter "\{" dan diakhiri oleh karakter "\}".
+\end{enumerate}
+
+\section{IDE}
+IDE (\textit{Integrated Development Environment}) adalah aplikasi yang digunakan dalam mengembangkan program. Untuk tujuan mempelajari materi struktur data, sebenarnya nyaris tidak diperlukan IDE. Kita hanya perlu memiliki kompilator \textit{C++} sebagai bahasa pemrograman yang memiliki notasi eksplisit terkait pointer (dijelaskan dalam sub bab \ref{sec:pointer}) serta editor teks untuk menulis sejumlah instruksi \texttt{C++}. Untuk pengguna sistem operasi GNU/Linux dalam berbagai variannya, nyaris semua jenis kompilator tersedia secara gratis. Saya sendiri menggunakan editor teks Geany\footnote{https://www.geany.org/} dengan kompilator \texttt{C++} dari GNU \textit{Project}.
+
+Namun, tidak demikian halnya dengan pengguna sistem Operasi Microsoft Windows. 
+
 \section{Tipe data \texttt{pointer} dan \texttt{struct}}
+\label{sec:pointer}
 
 \bibliographystyle{apalike}
 \bibliography{reference}

@@ -6,5 +6,6 @@
 \contentsline {section}{\numberline {1.3}Prinsip dasar pemrograman}{3}{section.1.3}
 \contentsline {chapter}{\numberline {2}Bahasa Pemrograman C++}{6}{chapter.2}
 \contentsline {section}{\numberline {2.1}Pendahuluan}{6}{section.2.1}
-\contentsline {section}{\numberline {2.2}Tipe data \texttt {pointer} dan \texttt {struct}}{7}{section.2.2}
-\contentsline {chapter}{Daftar Referensi}{8}{chapter*.9}
+\contentsline {section}{\numberline {2.2}IDE}{7}{section.2.2}
+\contentsline {section}{\numberline {2.3}Tipe data \texttt {pointer} dan \texttt {struct}}{8}{section.2.3}
+\contentsline {chapter}{Daftar Referensi}{10}{chapter*.9}
