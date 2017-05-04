@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 typedef struct data {
@@ -10,8 +9,6 @@ typedef struct data {
 int main() {
 	int a;
 	a=10;
-	/*double b;
-	char c;*/
 	int *p;
 	p=&a;
 	DATA x;

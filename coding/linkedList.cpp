@@ -18,6 +18,7 @@ class LinkedList {
 		void insertAkhir();
 		void display();
 		void removeAwal();
+		void removeAkhir();
 };
 
 LinkedList::LinkedList() {
@@ -75,9 +76,29 @@ void LinkedList::insertAkhir() {
 }
 
 void LinkedList::removeAwal() {
-	DATA *temp=new DATA;
-	temp=awal->pointer;
-	awal=temp;
+	if(awal==NULL && akhir==NULL) {
+		cout << "Linked list kosong\n";
+	}
+	else {
+		DATA *temp=new DATA;
+		temp=awal->pointer;
+		awal=temp;
+	}
+}
+
+void LinkedList::removeAkhir() {
+	if(awal==NULL && akhir==NULL) {
+		cout << "Linked list kosong\n";
+	}
+	else {
+		DATA *temp=new DATA;
+		temp=awal;
+		while(temp->pointer!=akhir) {
+			temp=temp->pointer;
+		}
+		temp->pointer=NULL;
+		akhir=temp;
+	}
 }
 
 int main() {
@@ -89,6 +110,8 @@ int main() {
 	list.insertAkhir();
 	list.display();
 	list.removeAwal();
+	list.display();
+	list.removeAkhir();
 	list.display();
 	return 0;
 }

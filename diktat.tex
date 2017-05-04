@@ -122,6 +122,7 @@ Dapat disimpulkan bahwa ADT merupakan spesifikasi, sementara tipe data adalah pe
 \end{figure} 
 
 \section{Prinsip dasar pemrograman}
+\label{sec:prinsip}
 Prinsip dasar dalam pemrograman tahapan yang harus dilakukan dalam menyelesaikan masalah menggunakan bantuan komputer. Salah satu tahapan dalam pemrograman terstruktur dikenal sebagai \textit{system development life cycle} (SDLC). Tahapan SDLC adalah sebagai berikut.
 \begin{enumerate}
 \item Analisis masalah: apa yang menjadi masalah, apa saja solusinya, apa dan siapa (pemrograman berorientasi obyek) yang terlibat, tahapan dalam penyelelesaian, indikasi keberhasilan, dll.
@@ -223,33 +224,21 @@ Tipe data \textit{pointer} adalah salah satu tipe data yang didefinisikan di \te
 
 Sebagai contoh, untuk mendefinisikan sebuah variabel \textit{integer}, \texttt{C/C++} memiliki sintaks \texttt{int a;}. Untuk membuat sebuah tipe data \textit{pointer} yang akan menunjuk variabel bertipe \textit{integer}, \texttt{C/C++} memiliki sintaks \texttt{int *p;}. Sedangkan untuk membuat \textit{pointer} \texttt{p} menunjuk variabel \texttt{a}, \texttt{C/C++} memilki sintaks \texttt{p=\&a;}. Proses \textit{assignment} tersebut juga dapat dilakukan sekaligus pada saat deklarasi dengan sintaks \texttt{int *p=\&a;}. Intinya, tipe data \textit{pointer} dicirikan dengan karakter "\texttt{*}" di awal variabel dan mengikuti variabel yang ditunjuk. Jika akan digunakan menunjuk vairabel \textit{integer}, maka \textit{pointer} juga harus dideklarasikan sebagai \textit{integer}.
 
-Kemudian, ada tipe data lainnya yang bertugas untuk mengemas sejumlah tipe data yang telah terdefinisi dalam \texttt{C/C++} yang disebut sebagai \texttt{struct}. Tipe data ini memungkinkan kita membuat tipe data baru yang mirip dengan sebuah obyek tanpa fungsi, karena hanya memiliki atribut. Sekali diacu dalam program, maka kita dapat mengakses semua data yang dikemas dalam \texttt{struct}. Program \ref{pointerstruct} mengilustrasikan penggunaan variabel \texttt{pointer} dan \texttt{struct}.
+Sebagai contoh, di Gambar \ref{fig:pointer}\footnote{\url{http://stackoverflow.com/questions/4483653/can-you-explain-the-concept-of-the-this-pointer}}, terdapat dua deklarasi variabel. Yang pertama adalah \texttt{val} dengan tipe \textit{integer} yang saat dieksekusi di simpan dalam RAM di alamat \texttt{0xFE}. Sedangkan yang kedua adalah \texttt{*ptr} dengan tipe \texttt{pointer} ke \textit{integer}, tepatnya variabel \texttt{val}. Variabel \texttt{pointer} disimpan di alamat \texttt{0x83} saat diesekusi.
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.5]{pics/pointer.png}
+\caption{Ilustrasi penggunaan variabel dengan tipe pointer}
+\label{fig:pointer}
+\end{figure}
+
+Kemudian, ada tipe data lainnya yang bertugas untuk mengemas sejumlah tipe data yang telah terdefinisi dalam \texttt{C/C++} yang disebut sebagai \texttt{struct}. Tipe data ini memungkinkan kita membuat tipe data baru yang mirip dengan sebuah obyek tanpa fungsi, karena hanya memiliki atribut. Sekali diacu dalam program, maka kita dapat mengakses semua data yang dikemas dalam \texttt{struct}. Program \ref{pointerstruct} mengilustrasikan penggunaan variabel \texttt{pointer} dan \texttt{struct}. Sedangkan Gambar \ref{fig:hasilintro} menunjukkan hasilnya saat dieksekusi. 
+
+Kedua tipe data inilah yang akan banyak digunakan dalam perkuliahan struktur data. Sedangkan yang lainnya hanya pelengkap saja.
+\vfill
 \scriptsize
-\begin{lstlisting}[language=c++, numbers=left, numberstyle=\tiny, caption=intro.cpp, showstringspaces=false, label=pointerstruct]
-#include <iostream>
-using namespace std;
-
-typedef struct data {
-	int nilai;
-	struct data *pointer;
-}DATA;
-
-int main() {
-	int a;
-	a=10;
-	int *p;
-	p=&a;
-	DATA x;
-	x.nilai=7;
-	x.pointer=NULL;
-	
-	cout << "Nilai variabel a adalah " << a << " dan berlokasi di alamat " << &a << endl;
-	cout << "Nilai variabel *p adalah " << *p << " dan berlokasi di alamat " << p << endl;
-	cout << "x.nilai=" << x.nilai << ", x.pointer merujuk ke alamat " << x.pointer << endl;
-	return 0;
-}
-\end{lstlisting}
+\lstinputlisting[language=c++, numbers=left, numberstyle=\tiny, caption=intro.cpp, showstringspaces=false, label=pointerstruct]{coding/intro.cpp}
 \normalsize
 
 Penjelasannya adalah sebagai berikut.
@@ -269,6 +258,90 @@ Penjelasannya adalah sebagai berikut.
 \end{itemize}
 \item Baris ke-18 s/d 20: menuliskan nilai-nilai yang sebelumnya di-\textit{assign} ke variabel untuk ditampilkan di layar.
 \item Baris tanpa penjelasan memiliki penjelasan yang sama dengan penjelasan Program \ref{hellocpp}.
+\end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics[scale=.5]{pics/hasilintro.png}
+\caption{Hasil eksekusi Program \ref{pointerstruct} di terminal}
+\label{fig:hasilintro}
+\end{figure}
+
+\section{Pemanggilan fungsi}
+\texttt{C/C++} memiliki dua skema pemanggilan fungsi, masing-masing adalah pemanggilan fungsi melalui nilai (\textit{calling by value}) dan melalui referensi (\textit{calling by reference}). Skema pertama, argumen fungsi adalah nilai dari yang akan dioperasikan. Jika nilai tersebut terwakili oleh sebuah variabel dalam fungsi asal, maka operasi yang dilakukan tidak akan mempengaruhi nilai pada variabel asalnya. Sebaliknya, pemanggilan fungsi dengan skema kedua memungkinkan perubahan pada nilai variabel asal. Hal ini disebakan karena pemanggilan fungsi dilakukan melalui lokasi absolut RAM di mana nilai tersebut di simpan. Program \ref{calling} akan menunjukkan perbedaannya. Sedangkan Gambar \ref{fig:function} adalah hasil dari eksekusi Program \ref{calling}.
+
+\scriptsize
+\lstinputlisting[language=c++, numbers=left, numberstyle=\tiny, caption=function.cpp, showstringspaces=false, label=calling]{coding/function.cpp}
+\normalsize
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.5]{pics/hasilfunction.png}
+\caption{Hasil eksekusi Program \ref{calling}}
+\label{fig:function}.
+\end{figure}
+
+Penjelasan dari Program \ref{calling} adalah sebagai berikut.
+\begin{enumerate}
+\item Baris ke-4 s/d 7: isi dari fungsi yang menerima argumen berupa nilai. Nilai tersebut sejatinya dicopy ke lokasi lain dalam RAM untuk selanjutnya dioperasikan (dalam hal ini akan dikalikan dengan $2$). Hasilnya dikembalikan ke fungsi yang memanggil.
+\item Baris ke-9 s/d 12 serta baris ke-14 s/d 17: isi dari fungsi yang menerima argumen berupa alamat dari variabel yang akan dioperasikan. Operasi yang dilakukan fungsi pada variabel akan dilakukan di lokasi yang sama dengan lokasi variabel, sehingga hasilnya akan mengubah nilai asalnya. Kedua fungsi yang sama (\texttt{byReference1} dan \texttt{byReference2}) adalah fungsi dengan pemanggilan melalui referensi dengan notasi yang berbeda.
+\item Baris ke-19 s/d 26: isi dari fungsi dengan pemanggilan melalui nilai, tetapi dengan yang berbeda dengan fungsi \texttt{byValue}. Di sini, fungsi hanya menjalankan tugas untuk melakukan pertukaran $2$ nilai yang diberikan.
+\item Baris ke-28 s/d 35: isi dari fungsi dengan pemanggilan melalui referensi, tetapi dengan tugas yang berbeda dengan fungsi \texttt{byReference1} dan \texttt{byReference2}. Di sini, fungsi hanya menjalankan tugas untuk melakukan pertukaran $2$ variabel yang diberikan melalui alamatnya.
+\item Baris ke-38 s/d 42: deklarasi 2 variabel \textit{integer} serta \textit{assignment} nilai ke kedua variabel tersebut secara langsung melalui \textit{keyboard}.
+\item Baris ke-43 dan 44: pemanggilan fungsi \texttt{tukar1} untuk kemudian nilainya ditampilkan kembali untuk melihat pengaruhnya. Maksud yang sama juga dilakukan baris ke-45 dan 46 untuk fungsi \texttt{tukar2}.
+\item Baris ke-48: deklarasi variabel \texttt{pointer} dengan nama "\texttt{*p1}" dan "\texttt{*p2}".
+\item Baris ke-49 dan 50: pemanggilan fungsi \texttt{byValue} untuk kemudian nilainya di-\textit{assign} ke variabel \texttt{b}. Selanjutnya, nilai variabel \texttt{a} dan \texttt{b} untuk melihat pengaruhnya. 
+\item Baris ke-51 dan 52: pemanggilan fungsi \texttt{byReference1} yang menerima argumen berupa lokasi variabel \texttt{a} untuk kemudian nilainya di-\textit{assign} ke variabel \texttt{b}. Selanjutnya, nilai variabel \texttt{a} dan \texttt{b} untuk melihat pengaruhnya. Maksud yang sama juga dilakukan baris ke-54 dan 55 dengan memanggil fungsi \texttt{byReference2}.
+\item Sebelumnya, baris ke-53 dilakukan proses \textit{assignment} alamat variabel \texttt{a} ke variabel pointer \texttt{*p1}. Argumen yang diterima fungsi \texttt{byReference1} dan \texttt{byReference2} sama-sama menerima argumen berupa alamat dari variabel \texttt{a}, hanya dengan notasi berbeda. Argumen ke fungsi \texttt{byReference1} adalah alamat variabel \texttt{a} secara langsung, sedangkan argumen ke fungsi \texttt{byReference2} alamat variabel \texttt{a} dilewatkan melalui variabel \texttt{pointer}. Perhatikan kembali Gambar \ref{fig:pointer}.
+\item Baris ke-56: menampilkan isi variabel \texttt{a} melalui variabel \texttt{*p1}.
+\item Baris ke-57: melakukan \textit{assigment} ke variabel \texttt{*p2} yang isinya adalah \texttt{*p1}. Dalam hal ini, variabel \texttt{*p1} dan \texttt{*p2} menunjuk lokasi yang sama, yaitu lokasi variabel \texttt{a}.
+\item Baris ke-58: menampilkan isi variabel \texttt{a} melalui variabel \texttt{*p2}. 
+\end{enumerate}
+
+\chapter{\textit{Array dan Linked list}}
+\section{\textit{Array}}
+Kita dapat membuat variabel yang terdiri dari sejumlah elemen dengan tipe yang sama yang diacu sekaligus. Varibel tersebut, jika selama eksekusi jumlah elemennya tetap disebut sebagai \textit{array}. Sedangkan jika jumlah elemennya berubah disebut sebagai \textit{linked list}. Dengan \textit{linked list}, elemen dari variabel dapat berubah selama eksekusi, baik nilai maupun jumlahnya. Perubahan jumlah elemen dapat terjadi di mana saja, apakah itu di awal, akhir maupun di tengah rangkaian data. Perhatikan Program \ref{array} yang mengilustrasikan kegunaan array dalam \texttt{C++}. Dalam program tersebut, sebuah variabel \textit{array} berelemen 10 bilangan \textit{integer} diisi secara acak untuk kemudian ditampilkan isinya di layar.
+
+\scriptsize
+\lstinputlisting[language=c++, numbers=left, numberstyle=\tiny, caption=array.cpp, showstringspaces=false, label=array]{coding/array.cpp}
+\normalsize
+
+Penjelasan dari Program \ref{array} adalah sebagai berikut.
+\begin{enumerate}
+\item Baris ke-2: deklarasi pustaka untuk dapat membuat bilangan \textit{pseudo random} (fungsi \texttt{srand}), sehingga pemanggilan fungsi untuk menghasilkan bilangan random selalu berbeda, dari satu eksekusi ke eksekusi selanjutnya.
+\item Baris ke-3: deklarasi pustaka untuk fungsi \texttt{time}.
+\item Baris ke-7: deklarasi variabel \textit{array} dengan jumlah elemen 10 bilangan \textit{integer}.
+\item Baris ke-9: fungsi yang dapat membuat variabel \texttt{seed} selalu berubah pada setiap eksekusinya karena nilai bergantung pada saat program dieksekusi. Variabel \texttt{seed}\footnote{\url{https://en.wikipedia.org/wiki/Random_seed}} ini adalah variabel yang menentukan bilangan acak yang dihasilkan.
+\item Baris ke-10 s/d 12: \textit{looping} untuk mengisi \textit{array} dengan bilangan acak.
+\item Baris ke-13 s/d 21: \textit{looping} untuk menampilkan nilai eleman \textit{array}. Dari \textit{looping} ini, terlihat bahwa elemen array dapat diakses langsung melalui nomor index.
+\end{enumerate}
+
+\section{\textit{Linked list}}
+Untuk \textit{linked list}, sebuah Program \ref{linkedlist} dibuat untuk mensimulasikan penggunaannya. Di awal, \textit{linked list} akan dibuat dengan jumlah 10 elemen. Kemudian, operasi penambahan dan pengurangan elemen dilakukan, baik di awal, maupun akhir elemen \textit{linked list}. Sedangkan Gambar \ref{fig:linkedList} menunjukkan hasil eksekusinya. Program \ref{linkedlist} telah memanfaatkan fitur orientasi obyek dari \texttt{C++}. 
+
+Yang perlu diperhatikan adalah program ini tidak memiliki \textit{destructor}, fungsi yang mendestruksi semua obyek saat program selesai dijalankan. Karena itu, dari sisi penggunaan RAM, program ini terbilang buruk. Hal ini disebabkan karena setiap selesai menjalankan program ini, semua elemen yang pernah dibuat tetap berada di dalam RAM dengan status terisi, meskipun tidak pernah digunakan lagi. Peran yang dijalankan oleh \textit{destructor} disebut sebagai \textit{garbage collector} di pemrograman Java\footnote{\url{http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html}}. Efisiensi penggunaan media penyimpanan, baik RAM maupun \textit{hardisk}, baik saat disimpan, dijalankan bahkan paska dijalankan yang menjadi kriteria baik tidaknya sebuah program. Hal ini disajikan dalam sub bab \ref{sec:prinsip}.
+
+\scriptsize
+\lstinputlisting[language=c++, numbers=left, numberstyle=\tiny, caption=linkedList.cpp, showstringspaces=false, label=linkedlist]{coding/linkedList.cpp}
+\normalsize
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.5]{pics/hasillinkedlist.png}
+\caption{Hasil eksekusi linkedList.cpp}
+\label{fig:linkedList}
+\end{figure}
+
+Penjelasan dari Program \ref{linkedlist} adalah sebagai berikut.
+\begin{enumerate}
+\item Baris ke-11 s/d 22: deklarasi class LinkedList. Class ini terdiri dari $2$ atribut dan $6$ fungsi, termasuk \textit{constructor}. Atribut yang terlibat adalah variabel \textit{pointer} yang bertugas menandai elemen pertama (\texttt{awal}) dan terakhir (\texttt{akhir}).
+\item Baris ke-24 s/d 45: isi dari fungsi \textit{constructor}. Di sini didefinisikan $10$ elemen pertama dari \textit{linked list}. Pengisian $10$ elemen pertama dilakukan dalam $2$ tahap. Yang pertama, saat elemen pertama diisi, semua pointer \texttt{awal} dan \texttt{akhir} menunjuk pada elemen tersebut (baris ke-34 dan 35). Selain elemen pertama, elemen yang sebelumnya ditunjuk oleh pointer akhir di-\textit{assign} agar menunjuk elemen yang baru (baris ke-41). Sementara pointer akhir di-\textit{assign} untuk menunjuk elemen yang baru.
+\item Baris ke-47 s/d 61: isi setiap elemen ditampilkan ke layar dimulai dari elemen pertama.
+\item Baris ke-63 s/d 68: elemen baru ditambahkan sebelum elemen pertama, sehingga elemen baru tersebut sekarang menjadi elemen pertama dalam \textit{linked list}.
+\item Baris ke-70 s/d 76: elemen baru ditambahkan setelah elemen terakhir, sehingga elemen baru tersebut sekarang menjadi elemen terakhir dalam \textit{linked list}.
+\item Baris ke-78 s/d 87: elemen pertama dikeluarkan dari \textit{linked list}.
+\item Baris ke-89 s/d 102: elemen terakhir dikeluarkan dari \textit{linked list}.
+\item Baris ke-104 s/d 117: isi dari fungsi \texttt{main} berupa pendefinisian obyek \texttt{list}, \texttt{seed} serta pemanggilan terhadap fungsi-fungsi yang telah didefinisikan dalam \textit{class} \texttt{LinkedList}.
 \end{enumerate}
 
 \bibliographystyle{apalike}

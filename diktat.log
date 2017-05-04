@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.22)  3 MAY 2017 10:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.22)  4 MAY 2017 09:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -505,7 +505,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 )
 \c@lstlisting=\count136
 
-<pics/logo.png, id=48, 356.0502pt x 382.5492pt>
+<pics/logo.png, id=64, 356.0502pt x 382.5492pt>
 File: pics/logo.png Graphic file (type png)
  <use pics/logo.png>
 Package pdftex.def Info: pics/logo.png used on input line 82.
@@ -542,7 +542,7 @@ t.toc)
 
 ]
 BAB 1.
-<pics/dataRepresentation.png, id=121, 338.76563pt x 465.23813pt>
+<pics/dataRepresentation.png, id=171, 338.76563pt x 465.23813pt>
 File: pics/dataRepresentation.png Graphic file (type png)
 
 <use pics/dataRepresentation.png>
@@ -552,25 +552,25 @@ Package pdftex.def Info: pics/dataRepresentation.png used on input line 99.
 
 
  <./pics/dataRepresentation.png>]
-<pics/datatype.png, id=130, 513.41812pt x 350.05782pt>
+<pics/datatype.png, id=180, 513.41812pt x 350.05782pt>
 File: pics/datatype.png Graphic file (type png)
  <use pics/datatype.png>
 Package pdftex.def Info: pics/datatype.png used on input line 119.
 (pdftex.def)             Requested size: 256.70842pt x 175.02847pt.
 
 [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 131.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 132.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 131.
- [3 <./pics/datatype.png>] <../CommonDS.png, id=155, 675.27281pt x 415.5525pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 132.
+ [3 <./pics/datatype.png>] <../CommonDS.png, id=203, 675.27281pt x 415.5525pt>
 File: ../CommonDS.png Graphic file (type png)
 
 <use ../CommonDS.png>
-Package pdftex.def Info: ../CommonDS.png used on input line 156.
+Package pdftex.def Info: ../CommonDS.png used on input line 157.
 (pdftex.def)             Requested size: 303.86995pt x 186.99689pt.
  [4 <../CommonDS.png>] [5]
 BAB 2.
@@ -584,63 +584,104 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 187.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 188.
+nput line 188.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 189.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <7> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 188.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 189.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 191.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 192.
  [6
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 220.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 221.
  [7]
-Overfull \hbox (29.7292pt too wide) in paragraph at lines 247--248
+<pics/pointer.png, id=270, 374.39874pt x 298.11375pt>
+File: pics/pointer.png Graphic file (type png)
+ <use pics/pointer.png>
+Package pdftex.def Info: pics/pointer.png used on input line 231.
+(pdftex.def)             Requested size: 187.19891pt x 149.0565pt.
+
+(./coding/intro.cpp [8 <./pics/pointer.png>]
+Overfull \hbox (29.7292pt too wide) in paragraph at lines 18--19
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][] 
  []
 
 
-Overfull \hbox (34.51259pt too wide) in paragraph at lines 248--249
+Overfull \hbox (34.51259pt too wide) in paragraph at lines 19--20
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][] 
  []
 
 
-Overfull \hbox (39.29597pt too wide) in paragraph at lines 249--250
+Overfull \hbox (39.29597pt too wide) in paragraph at lines 20--21
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][] 
  []
 
-[8] (./diktat.bbl [9])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 276.
- [10
+) <pics/hasilintro.png, id=283, 517.18219pt x 51.94406pt>
+File: pics/hasilintro.png Graphic file (type png)
+
+<use pics/hasilintro.png>
+Package pdftex.def Info: pics/hasilintro.png used on input line 265.
+(pdftex.def)             Requested size: 258.59045pt x 25.97195pt.
+ [9] (./coding/function.cpp [10 <./pics/hasilintro.png>]) <pics/hasilfunction.p
+ng, id=365, 264.23718pt x 167.87718pt>
+File: pics/hasilfunction.png Graphic file (type png)
+
+<use pics/hasilfunction.png>
+Package pdftex.def Info: pics/hasilfunction.png used on input line 279.
+(pdftex.def)             Requested size: 132.11826pt x 83.93839pt.
+ [11 <./pics/hasilfunction.png>] [12]
+BAB 3.
+(./coding/array.cpp) [13
+
+] (./coding/linkedList.cpp [14] [15])
+<pics/hasillinkedlist.png, id=544, 316.18124pt x 134.00063pt>
+File: pics/hasillinkedlist.png Graphic file (type png)
+
+<use pics/hasillinkedlist.png>
+Package pdftex.def Info: pics/hasillinkedlist.png used on input line 330.
+(pdftex.def)             Requested size: 158.09023pt x 67.00014pt.
+ [16 <./pics/hasillinkedlist.png>] (./diktat.bbl
+[17])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 349.
+ [18
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 276.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 349.
  (./diktat.aux (./pengantar.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 276.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 276.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 349.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 349.
 Package rerunfilecheck Info: File `diktat.out' has not changed.
-(rerunfilecheck)             Checksum: E2DF4995164A980FFABD32C43ABEC043;657.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 276.
+(rerunfilecheck)             Checksum: 1D08A51626A795E97CF6338B1DDD7F42;904.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 349.
  ) 
 Here is how much of TeX's memory you used:
- 10259 strings out of 493029
- 151616 string characters out of 6136234
- 281973 words of memory out of 5000000
- 13532 multiletter control sequences out of 15000+600000
- 10442 words of font info for 38 fonts, out of 8000000 for 9000
+ 10617 strings out of 493029
+ 156763 string characters out of 6136234
+ 294456 words of memory out of 5000000
+ 13622 multiletter control sequences out of 15000+600000
+ 11519 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,9n,60p,1097b,1303s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
+ 44i,9n,60p,1097b,1680s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
 , replaced by a fixed one
@@ -655,24 +696,25 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmtt12.pfb>
-Output written on diktat.pdf (15 pages, 458628 bytes).
+dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmtt12.pfb>
+Output written on diktat.pdf (23 pages, 544490 bytes).
 PDF statistics:
- 349 PDF objects out of 1000 (max. 8388607)
- 303 compressed objects within 4 object streams
- 100 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 747 PDF objects out of 1000 (max. 8388607)
+ 682 compressed objects within 7 object streams
+ 350 named destinations out of 1000 (max. 500000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
