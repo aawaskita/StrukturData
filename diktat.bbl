@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[Drozdek, 2001]{adam2001data}
+Drozdek, A. (2001).
+\newblock {\em Data Structures and Algorithms in C++}.
+\newblock Brooks/Cole.
+
 \bibitem[Group, 2005]{group2005data}
 Group, I. (2005).
 \newblock {\em Data Structures Using C}.

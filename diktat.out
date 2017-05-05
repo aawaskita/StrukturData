@@ -1,15 +1,20 @@
 \BOOKMARK [0][-]{chapter*.2}{Daftar Isi}{}% 1
 \BOOKMARK [0][-]{chapter*.3}{Daftar Gambar}{}% 2
-\BOOKMARK [0][-]{chapter.1}{1 Pendahuluan}{}% 3
-\BOOKMARK [1][-]{section.1.1}{1.1 Representasi data}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.2}{1.2 Tipe data abstrak}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.3}{1.3 Prinsip dasar pemrograman}{chapter.1}% 6
-\BOOKMARK [0][-]{chapter.2}{2 Bahasa Pemrograman C++}{}% 7
-\BOOKMARK [1][-]{section.2.1}{2.1 Pendahuluan}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.2}{2.2 IDE}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.3}{2.3 Tipe data pointer dan struct}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.4}{2.4 Pemanggilan fungsi}{chapter.2}% 11
-\BOOKMARK [0][-]{chapter.3}{3 Array dan Linked list}{}% 12
-\BOOKMARK [1][-]{section.3.1}{3.1 Array}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.2}{3.2 Linked list}{chapter.3}% 14
-\BOOKMARK [0][-]{chapter*.13}{Daftar Referensi}{}% 15
+\BOOKMARK [0][-]{section*.4}{Daftar Program}{}% 3
+\BOOKMARK [0][-]{section*.6}{Kata Pengantar}{}% 4
+\BOOKMARK [0][-]{chapter.1}{1 Pendahuluan}{}% 5
+\BOOKMARK [1][-]{section.1.1}{1.1 Representasi data}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.2}{1.2 Tipe data abstrak}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.3}{1.3 Prinsip dasar pemrograman}{chapter.1}% 8
+\BOOKMARK [0][-]{chapter.2}{2 Bahasa Pemrograman C++}{}% 9
+\BOOKMARK [1][-]{section.2.1}{2.1 Pendahuluan}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.2}{2.2 IDE}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.3}{2.3 Tipe data pointer dan struct}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.4}{2.4 Pemanggilan fungsi}{chapter.2}% 13
+\BOOKMARK [0][-]{chapter.3}{3 Array dan Linked list}{}% 14
+\BOOKMARK [1][-]{section.3.1}{3.1 Array}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.2}{3.2 Linked list}{chapter.3}% 16
+\BOOKMARK [0][-]{chapter.4}{4 Graph}{}% 17
+\BOOKMARK [1][-]{section.4.1}{4.1 Pendahuluan}{chapter.4}% 18
+\BOOKMARK [0][-]{chapter.5}{5 Tugas}{}% 19
+\BOOKMARK [0][-]{chapter*.16}{Bibliografi}{}% 20

@@ -1,5 +1,11 @@
+\select@language {bahasai}
+\select@language {bahasai}
 \contentsline {chapter}{Daftar Isi}{i}{chapter*.2}
 \contentsline {chapter}{Daftar Gambar}{ii}{chapter*.3}
+\contentsline {chapter}{Daftar Program}{ii}{section*.4}
+\contentsline {chapter}{\uppercase {Kata Pengantar}}{iii}{section*.6}
+\select@language {bahasai}
+\select@language {bahasai}
 \contentsline {chapter}{\numberline {1}Pendahuluan}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Representasi data}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Tipe data abstrak}{2}{section.1.2}
@@ -12,4 +18,7 @@
 \contentsline {chapter}{\numberline {3}\textit {Array dan Linked list}}{13}{chapter.3}
 \contentsline {section}{\numberline {3.1}\textit {Array}}{13}{section.3.1}
 \contentsline {section}{\numberline {3.2}\textit {Linked list}}{14}{section.3.2}
-\contentsline {chapter}{Daftar Referensi}{18}{chapter*.13}
+\contentsline {chapter}{\numberline {4}\textit {Graph}}{18}{chapter.4}
+\contentsline {section}{\numberline {4.1}Pendahuluan}{18}{section.4.1}
+\contentsline {chapter}{\numberline {5}Tugas}{21}{chapter.5}
+\contentsline {chapter}{Bibliografi}{22}{chapter*.16}

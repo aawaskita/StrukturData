@@ -1,26 +1,12 @@
 %-----------------------------------------------------------------------------%
-\chapter*{\kataPengantar}
+\chapter*{Kata Pengantar}
 %-----------------------------------------------------------------------------%
-Alhamdulillah, segala puji dan syukur bagi Allah SWT atas segala rahmat dan hidayah-NYA sehingga \saya~dapat menyelesaikan disertasi yang berjudul ''Deteksi dini kondisi anomali pada jaringan sensor berbasis metode entropi''. Penulisan disertasi ini merupakan salah satu syarat untuk memperoleh gelar Doktor Ilmu Komputer (DIK) di Fakultas Ilmu Komputer, Universitas Indonesia.
-
-Pada kesempatan ini penulis ingin menyampaikan rasa terima kasih serta penghargaan kepada:
-\begin{enumerate}
-	\item Prof. Heru Suhartanto, Ph.D selaku promotor 
-	\item Dr. Laksana Tri Handoko sebagai ko-promotor 
-	\item Segenap pimpinan BATAN untuk kesempatan bagi \saya~melanjutkan pendidikan
-	\item Kemenristekdikti untuk beasiswa yang diberikan 
-	\item Rekan-rekan \saya~di program DIK, Fasilkom UI untuk diskusi yang membangun
-	\item Keluarga \saya~yang selalu memberi dukungan dalam penyelesaian studi ini
-\end{enumerate}
-
-\saya~menyadari bahwa penulisan disertasi ini masih jauh dari sempurna, oleh karena itu \saya~sangat menghargai jika mendapat kritik dan saran membangun dari para pembaca.
-
-Akhirnya, semoga hasil karya \saya~dalam bentuk disertasi ini dapat memberikan manfaat bagi pembaca.
+Diktat kuliah struktur data diperuntukkan bagi peserta mata kuliah struktur data STMIK Eresha semester II. Diktat ini menggunakan buku \cite{group2005data} sebagai acuan utama.
 
 \vspace*{0.1cm}
 \begin{flushright}
-Depok, \tanggalLulus\\[0.1cm]
+Serpong, \date{}\\[0.1cm]
 \vspace*{1cm}
-\penulis
+Dr. Arya Adhyaksa Waskita
 
 \end{flushright}

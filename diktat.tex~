@@ -32,6 +32,9 @@
 \usepackage{hyperref}
 \usepackage{uithesis}
 \usepackage{listings}
+\usepackage[nodayofweek,level]{datetime}
+\usepackage[bahasai]{babel}
+\selectlanguage{bahasai}
 \renewcommand{\bibname}{Daftar Referensi}
 \renewcommand{\contentsname}{Daftar Isi}
 \renewcommand{\listfigurename}{Daftar Gambar}
@@ -42,7 +45,9 @@
 \renewcommand{\chaptername}{BAB}
 \renewcommand{\figurename}{\bo{Gambar}}
 \renewcommand{\tablename}{\bo{Tabel}}
-\include{hype.indonesia}
+\Var{\kataPengantar}{Kata Pengantar}
+%\include{hype.indonesia}
+
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
@@ -63,6 +68,7 @@
 \includegraphics[scale=.2]{pics/logo.png}
 \end{figure}
 STMIK Eresha - 2017
+%Powered by \LaTex
 
 %{\noindent The Publisher \plogo}\\[\baselineskip] % Publisher and logo
 }}
@@ -84,7 +90,9 @@ STMIK Eresha - 2017
 \setcounter{page}{0}
 \tableofcontents
 \listoffigures
+\addChapter{Daftar Program}
 \lstlistoflistings
+\addChapter{\kataPengantar}
 \include{pengantar}
 
 \pagenumbering{arabic}
@@ -122,6 +130,7 @@ Dapat disimpulkan bahwa ADT merupakan spesifikasi, sementara tipe data adalah pe
 \end{figure} 
 
 \section{Prinsip dasar pemrograman}
+\label{sec:prinsip}
 Prinsip dasar dalam pemrograman tahapan yang harus dilakukan dalam menyelesaikan masalah menggunakan bantuan komputer. Salah satu tahapan dalam pemrograman terstruktur dikenal sebagai \textit{system development life cycle} (SDLC). Tahapan SDLC adalah sebagai berikut.
 \begin{enumerate}
 \item Analisis masalah: apa yang menjadi masalah, apa saja solusinya, apa dan siapa (pemrograman berorientasi obyek) yang terlibat, tahapan dalam penyelelesaian, indikasi keberhasilan, dll.
@@ -297,14 +306,15 @@ Penjelasan dari Program \ref{calling} adalah sebagai berikut.
 \item Baris ke-58: menampilkan isi variabel \texttt{a} melalui variabel \texttt{*p2}. 
 \end{enumerate}
 
-\section{\textit{Array dan Linked list}}
+\chapter{\textit{Array dan Linked list}}
+\section{\textit{Array}}
 Kita dapat membuat variabel yang terdiri dari sejumlah elemen dengan tipe yang sama yang diacu sekaligus. Varibel tersebut, jika selama eksekusi jumlah elemennya tetap disebut sebagai \textit{array}. Sedangkan jika jumlah elemennya berubah disebut sebagai \textit{linked list}. Dengan \textit{linked list}, elemen dari variabel dapat berubah selama eksekusi, baik nilai maupun jumlahnya. Perubahan jumlah elemen dapat terjadi di mana saja, apakah itu di awal, akhir maupun di tengah rangkaian data. Perhatikan Program \ref{array} yang mengilustrasikan kegunaan array dalam \texttt{C++}. Dalam program tersebut, sebuah variabel \textit{array} berelemen 10 bilangan \textit{integer} diisi secara acak untuk kemudian ditampilkan isinya di layar.
 
 \scriptsize
 \lstinputlisting[language=c++, numbers=left, numberstyle=\tiny, caption=array.cpp, showstringspaces=false, label=array]{coding/array.cpp}
 \normalsize
 
-Penjelasan dari Preogram \ref{array} adalah sebagai berikut.
+Penjelasan dari Program \ref{array} adalah sebagai berikut.
 \begin{enumerate}
 \item Baris ke-2: deklarasi pustaka untuk dapat membuat bilangan \textit{pseudo random} (fungsi \texttt{srand}), sehingga pemanggilan fungsi untuk menghasilkan bilangan random selalu berbeda, dari satu eksekusi ke eksekusi selanjutnya.
 \item Baris ke-3: deklarasi pustaka untuk fungsi \texttt{time}.
@@ -314,7 +324,50 @@ Penjelasan dari Preogram \ref{array} adalah sebagai berikut.
 \item Baris ke-13 s/d 21: \textit{looping} untuk menampilkan nilai eleman \textit{array}. Dari \textit{looping} ini, terlihat bahwa elemen array dapat diakses langsung melalui nomor index.
 \end{enumerate}
 
-Untuk \textit{linked list}, sebuah Program \ref{} dibuat untuk mensimulasikan penggunaannya. Di awal, \textit{linked list} akan dibuat dengan jumlah 10 elemen. Kemudian, operasi penambahan dan pengurangan elemen dilakukan, baik di awal, tengah maupun akhir \textit{linked list}. 
+\section{\textit{Linked list}}
+Untuk \textit{linked list}, sebuah Program \ref{linkedlist} dibuat untuk mensimulasikan penggunaannya. Di awal, \textit{linked list} akan dibuat dengan jumlah 10 elemen. Kemudian, operasi penambahan dan pengurangan elemen dilakukan, baik di awal, maupun akhir elemen \textit{linked list}. Sedangkan Gambar \ref{fig:linkedList} menunjukkan hasil eksekusinya. Program \ref{linkedlist} telah memanfaatkan fitur orientasi obyek dari \texttt{C++}. 
+
+Yang perlu diperhatikan adalah program ini tidak memiliki \textit{destructor}, fungsi yang mendestruksi semua obyek saat program selesai dijalankan. Karena itu, dari sisi penggunaan RAM, program ini terbilang buruk. Hal ini disebabkan karena setiap selesai menjalankan program ini, semua elemen yang pernah dibuat tetap berada di dalam RAM dengan status terisi, meskipun tidak pernah digunakan lagi. Peran yang dijalankan oleh \textit{destructor} disebut sebagai \textit{garbage collector} di pemrograman Java\footnote{\url{http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html}}. Efisiensi penggunaan media penyimpanan, baik RAM maupun \textit{hardisk}, baik saat disimpan, dijalankan bahkan paska dijalankan yang menjadi kriteria baik tidaknya sebuah program. Hal ini disajikan dalam sub bab \ref{sec:prinsip}.
+
+\scriptsize
+\lstinputlisting[language=c++, numbers=left, numberstyle=\tiny, caption=linkedList.cpp, showstringspaces=false, label=linkedlist]{coding/linkedList.cpp}
+\normalsize
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.5]{pics/hasillinkedlist.png}
+\caption{Hasil eksekusi linkedList.cpp}
+\label{fig:linkedList}
+\end{figure}
+
+Penjelasan dari Program \ref{linkedlist} adalah sebagai berikut.
+\begin{enumerate}
+\item Baris ke-11 s/d 22: deklarasi class LinkedList. Class ini terdiri dari $2$ atribut dan $6$ fungsi, termasuk \textit{constructor}. Atribut yang terlibat adalah variabel \textit{pointer} yang bertugas menandai elemen pertama (\texttt{awal}) dan terakhir (\texttt{akhir}).
+\item Baris ke-24 s/d 45: isi dari fungsi \textit{constructor}. Di sini didefinisikan $10$ elemen pertama dari \textit{linked list}. Pengisian $10$ elemen pertama dilakukan dalam $2$ tahap. Yang pertama, saat elemen pertama diisi, semua pointer \texttt{awal} dan \texttt{akhir} menunjuk pada elemen tersebut (baris ke-34 dan 35). Selain elemen pertama, elemen yang sebelumnya ditunjuk oleh pointer akhir di-\textit{assign} agar menunjuk elemen yang baru (baris ke-41). Sementara pointer akhir di-\textit{assign} untuk menunjuk elemen yang baru.
+\item Baris ke-47 s/d 61: isi setiap elemen ditampilkan ke layar dimulai dari elemen pertama.
+\item Baris ke-63 s/d 68: elemen baru ditambahkan sebelum elemen pertama, sehingga elemen baru tersebut sekarang menjadi elemen pertama dalam \textit{linked list}.
+\item Baris ke-70 s/d 76: elemen baru ditambahkan setelah elemen terakhir, sehingga elemen baru tersebut sekarang menjadi elemen terakhir dalam \textit{linked list}.
+\item Baris ke-78 s/d 87: elemen pertama dikeluarkan dari \textit{linked list}.
+\item Baris ke-89 s/d 102: elemen terakhir dikeluarkan dari \textit{linked list}.
+\item Baris ke-104 s/d 117: isi dari fungsi \texttt{main} berupa pendefinisian obyek \texttt{list}, \texttt{seed} serta pemanggilan terhadap fungsi-fungsi yang telah didefinisikan dalam \textit{class} \texttt{LinkedList}.
+\end{enumerate}
+
+\chapter{\textit{Graph}}
+\section{Pendahuluan}
+\textit{Graph} adalah sarana untuk menyimpan dan menganalisis metadata serta hubungan yang mungkin ada antar data tersebut. \textit{Graph} terdiri dari dua elemen, masing-masing adalah \textbf{vertex} (yang dapat dianalogikan dengan \textit{node}) serta \textbf{edge} yang menghubungkan sejumlah \textbf{vertex}. \textbf{Vertex} tanpa \textbf{edge} sudah dapat disebut sebagai \textit{graph}, tetapi tidak sebaliknya. Gambar \ref{fig:jenisgraph} menunjukkan beberapa jenis \textit{graph}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.35]{pics/graph.png}
+\caption[Jenis-jenis \textit{graph}]{Jenis-jenis \textit{graph}\cite{adam2001data}}
+\label{fig:jenisgraph}
+\end{figure}
+
+\textit{Graph} yang terdiri dari sejumlah \textbf{vertex}, dengan atau tanpa \textbf{edge} disebut sebagai \textit{simple graph} (Gambar \ref{fig:jenisgraph} (a)-(d)). Jika setiap \textbf{vertex} dalam \textit{graph} saling terhubung oleh satu \textbf{edge}, \textit{graph} disebut lengkap (\textit{complete graph}). Contohnya ditunjukkan oleh Gambar \ref{fig:jenisgraph} (c). Kemudian, ketika dua \textbf{vertex} berbeda saling terhubung melalui lebih dari satu \textbf{edge}, kondisi tersebut didefinisikan sebagai \textit{multigraph}. Ilustrasinya ditunjukkan oleh Gambar \ref{fig:jenisgraph} (e). Kondisi umum dari multigraph di mana \textbf{vertex} yang sama boleh dihubungkan dengan \textbf{edge} disebut sebagai \textit{pseudograph}. Dengan demikian, akan terjadi \textit{looping} \textbf{vertex} ke dirinya sendiri. Kondisi ini diilustrasikan oleh Gambar \ref{fig:jenisgraph} (f).
+
+\textit{Graph} dengan \textbf{edge} berarah disebut sebagai \textit{directed graph} atau \textit{digraph}. Pada kondisi ini, dua vertex saling terhubung hanya pada arah tertentu. Sebaliknya, jika tidak ada batasan arah pada semua \textbf{edge} dalam \textit{graph}, maka \textit{graph} disebut sebagai \textit{undirected graph}.
+
+Sebuah \textit{path}, $v_{1}$ ke $v_{n}$ merupakan rangkaian \textbf{edge}($v_{1}v_{2}$), \textbf{edge}($v_{2}v_{3}$) $\ldots$ \textbf{edge}($v_{n-1}v_{n}$) dan dinotasikan sebagai \textit{path} $v_{1}, v_{2}, v_{3} \ldots v_{n-1}, v_{n}$. Jika $v_{1}=v_{n}$ serta tidak ada \textbf{edge} berulang, maka \textit{path} disebut sebagai sirkuit. Sebuah kondisi khusus dari sirkuit adalah ketika semua \textbf{vertex} yang terlibat dalam \textit{path} tidak ada yang sama.
 \bibliographystyle{apalike}
 \bibliography{reference}
 \end{document}
