@@ -1,11 +1,13 @@
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
 using namespace std;
 
 int main() {
-	int n=1000;
+	int n=10;
 	int a[n];
 	int i,j,temp;
+	srand(time(NULL));
 	for(i=0;i<n;i++) {
 		a[i]=rand()%100;
 	}

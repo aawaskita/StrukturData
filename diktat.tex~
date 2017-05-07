@@ -46,7 +46,7 @@
 \renewcommand{\figurename}{\bo{Gambar}}
 \renewcommand{\tablename}{\bo{Tabel}}
 \Var{\kataPengantar}{Kata Pengantar}
-%\include{hype.indonesia}
+\include{hype.indonesia}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -365,9 +365,23 @@ Penjelasan dari Program \ref{linkedlist} adalah sebagai berikut.
 
 \textit{Graph} yang terdiri dari sejumlah \textbf{vertex}, dengan atau tanpa \textbf{edge} disebut sebagai \textit{simple graph} (Gambar \ref{fig:jenisgraph} (a)-(d)). Jika setiap \textbf{vertex} dalam \textit{graph} saling terhubung oleh satu \textbf{edge}, \textit{graph} disebut lengkap (\textit{complete graph}). Contohnya ditunjukkan oleh Gambar \ref{fig:jenisgraph} (c). Kemudian, ketika dua \textbf{vertex} berbeda saling terhubung melalui lebih dari satu \textbf{edge}, kondisi tersebut didefinisikan sebagai \textit{multigraph}. Ilustrasinya ditunjukkan oleh Gambar \ref{fig:jenisgraph} (e). Kondisi umum dari multigraph di mana \textbf{vertex} yang sama boleh dihubungkan dengan \textbf{edge} disebut sebagai \textit{pseudograph}. Dengan demikian, akan terjadi \textit{looping} \textbf{vertex} ke dirinya sendiri. Kondisi ini diilustrasikan oleh Gambar \ref{fig:jenisgraph} (f).
 
-\textit{Graph} dengan \textbf{edge} berarah disebut sebagai \textit{directed graph} atau \textit{digraph}. Pada kondisi ini, dua vertex saling terhubung hanya pada arah tertentu. Sebaliknya, jika tidak ada batasan arah pada semua \textbf{edge} dalam \textit{graph}, maka \textit{graph} disebut sebagai \textit{undirected graph}.
+\textit{Graph} dengan \textbf{edge} berarah disebut sebagai \textit{directed graph} atau \textit{digraph}. Pada kondisi ini, dua vertex saling terhubung hanya pada arah tertentu. Sebaliknya, jika tidak ada batasan arah pada semua \textbf{edge} dalam \textit{graph}, maka \textit{graph} disebut sebagai \textit{undirected graph}. Jika pada \texttt{edge} di-\textit{assigned} sebuah nilai, maka \textit{graph} disebut dengan \textit{weighted graph}. Bobot dari \textit{graph} bisa bermakna banyak hal, tergantung dalam penerapannya. Program \ref{adjlist} menunjukkan contoh penerapan \textit{graph} dalam \texttt{C++} yang diambil dari laman \url{http://www.sanfoundry.com/cpp-program-implement-adjacency-list/}.
 
-Sebuah \textit{path}, $v_{1}$ ke $v_{n}$ merupakan rangkaian \textbf{edge}($v_{1}v_{2}$), \textbf{edge}($v_{2}v_{3}$) $\ldots$ \textbf{edge}($v_{n-1}v_{n}$) dan dinotasikan sebagai \textit{path} $v_{1}, v_{2}, v_{3} \ldots v_{n-1}, v_{n}$. Jika $v_{1}=v_{n}$ serta tidak ada \textbf{edge} berulang, maka \textit{path} disebut sebagai sirkuit. Sebuah kondisi khusus dari sirkuit adalah ketika semua \textbf{vertex} yang terlibat dalam \textit{path} tidak ada yang sama.
+\scriptsize
+\lstinputlisting[language=c++, numbers=left, numberstyle=\tiny, caption=adjList.cpp, showstringspaces=false, label=adjlist]{coding/adjList.cpp}
+\normalsize
+
+%Sebuah \textit{path}, $v_{1}$ ke $v_{n}$ merupakan rangkaian \textbf{edge}($v_{1}v_{2}$), \textbf{edge}($v_{2}v_{3}$) $\ldots$ \textbf{edge}($v_{n-1}v_{n}$) dan dinotasikan sebagai \textit{path} $v_{1}, v_{2}, v_{3} \ldots v_{n-1}, v_{n}$. Jika $v_{1}=v_{n}$ serta tidak ada \textbf{edge} berulang, maka \textit{path} disebut sebagai sirkuit. Sebuah kondisi khusus dari sirkuit adalah ketika semua \textbf{vertex} yang terlibat dalam \textit{path} tidak ada yang sama.
+
+\chapter{Tugas}
+Di kesempatan perkuliahan ini, mahasiswa diminta untuk membuat tulisan di blog dan media lainnya yang dapat diakses secara publik via internet. Tulisannya seputar penerapan struktur data dalam bahasa pemrograman, salah satunya \texttt{C++} yang telah dipelajari. Tulisan harus memiliki aspek berikut.
+\begin{enumerate}
+\item Skenario tentang struktur data seperti apa yang akan dibuat serta operasi apa saja yang dapat dijalankan pada struktur data tersebut.
+\item Ilustrasi (berupa gambar) dari struktur data tersebut.
+\item Penerapan program dari struktur data. Program dapat diambil dari kode sumber terbuka yang tersedia di internet. Pastikan menyertakan URL dari program tersebut. Sebagai contoh, mahasiswa dapat mengunjungi laman \url{http://www.sanfoundry.com/cpp-programming-examples-data-structures/} untuk menyelesaikan tugas ini.
+\item \textit{Screenshot} hasil eksekusinya.
+\end{enumerate} 
+
 \bibliographystyle{apalike}
 \bibliography{reference}
 \end{document}

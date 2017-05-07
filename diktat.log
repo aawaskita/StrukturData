@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.22)  6 MAY 2017 06:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.22)  8 MAY 2017 04:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -581,7 +581,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 )
 \c@lstlisting=\count164
 
-<pics/logo.png, id=84, 356.0502pt x 382.5492pt>
+<pics/logo.png, id=108, 356.0502pt x 382.5492pt>
 File: pics/logo.png Graphic file (type png)
  <use pics/logo.png>
 Package pdftex.def Info: pics/logo.png used on input line 88.
@@ -591,18 +591,18 @@ Package pdftex.def Info: pics/logo.png used on input line 88.
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./pics/logo.png>] (./dikta
-t.toc)
+t.toc
+[1
+
+])
 \tf@toc=\write4
 \openout4 = `diktat.toc'.
 
-
-[1
-
-] (./diktat.lof)
+ [2] (./diktat.lof)
 \tf@lof=\write5
 \openout5 = `diktat.lof'.
 
- [2
+ [3
 
 ] (./diktat.lol)
 \tf@lol=\write6
@@ -613,17 +613,17 @@ t.toc)
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 95.
 
-[3
+[4
 
 ]
 \openout2 = `pengantar.aux'.
 
- (./pengantar.tex) [4
+ (./pengantar.tex) [5
 
 
 ]
 Bab 1.
-<pics/dataRepresentation.png, id=209, 338.76563pt x 465.23813pt>
+<pics/dataRepresentation.png, id=255, 338.76563pt x 465.23813pt>
 File: pics/dataRepresentation.png Graphic file (type png)
 
 <use pics/dataRepresentation.png>
@@ -633,7 +633,7 @@ Package pdftex.def Info: pics/dataRepresentation.png used on input line 107.
 
 
  <./pics/dataRepresentation.png>]
-<pics/datatype.png, id=218, 513.41812pt x 350.05782pt>
+<pics/datatype.png, id=265, 513.41812pt x 350.05782pt>
 File: pics/datatype.png Graphic file (type png)
  <use pics/datatype.png>
 Package pdftex.def Info: pics/datatype.png used on input line 127.
@@ -647,7 +647,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 140.
- [3 <./pics/datatype.png>] <../CommonDS.png, id=241, 675.27281pt x 415.5525pt>
+ [3 <./pics/datatype.png>] <../CommonDS.png, id=287, 675.27281pt x 415.5525pt>
 File: ../CommonDS.png Graphic file (type png)
 
 <use ../CommonDS.png>
@@ -682,7 +682,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 229.
  [7]
-<pics/pointer.png, id=309, 374.39874pt x 298.11375pt>
+<pics/pointer.png, id=356, 374.39874pt x 298.11375pt>
 File: pics/pointer.png Graphic file (type png)
  <use pics/pointer.png>
 Package pdftex.def Info: pics/pointer.png used on input line 239.
@@ -706,14 +706,14 @@ Overfull \hbox (39.29597pt too wide) in paragraph at lines 20--21
 ][][][][][][][][][] 
  []
 
-) <pics/hasilintro.png, id=321, 517.18219pt x 51.94406pt>
+) <pics/hasilintro.png, id=367, 517.18219pt x 51.94406pt>
 File: pics/hasilintro.png Graphic file (type png)
 
 <use pics/hasilintro.png>
 Package pdftex.def Info: pics/hasilintro.png used on input line 273.
 (pdftex.def)             Requested size: 258.59045pt x 25.97195pt.
  [9] (./coding/function.cpp [10 <./pics/hasilintro.png>]) <pics/hasilfunction.p
-ng, id=404, 264.23718pt x 167.87718pt>
+ng, id=450, 264.23718pt x 167.87718pt>
 File: pics/hasilfunction.png Graphic file (type png)
 
 <use pics/hasilfunction.png>
@@ -724,7 +724,7 @@ Bab 3.
 (./coding/array.cpp) [13
 
 ] (./coding/linkedList.cpp [14] [15])
-<pics/hasillinkedlist.png, id=582, 316.18124pt x 134.00063pt>
+<pics/hasillinkedlist.png, id=629, 316.18124pt x 134.00063pt>
 File: pics/hasillinkedlist.png Graphic file (type png)
 
 <use pics/hasillinkedlist.png>
@@ -732,7 +732,7 @@ Package pdftex.def Info: pics/hasillinkedlist.png used on input line 338.
 (pdftex.def)             Requested size: 158.09023pt x 67.00014pt.
  [16 <./pics/hasillinkedlist.png>] [17]
 Bab 4.
-<pics/graph.png, id=644, 1017.04968pt x 472.76625pt>
+<pics/graph.png, id=690, 1017.04968pt x 472.76625pt>
 File: pics/graph.png Graphic file (type png)
  <use pics/graph.png>
 Package pdftex.def Info: pics/graph.png used on input line 361.
@@ -742,31 +742,44 @@ Package pdftex.def Info: pics/graph.png used on input line 361.
 
  <./pics/graph.png>] (./coding/adjList.cpp [19]) [20]
 Bab 5.
-(./diktat.bbl [21
+<pics/ArraySorting.png, id=787, 438.8897pt x 366.61969pt>
+File: pics/ArraySorting.png Graphic file (type png)
+
+<use pics/ArraySorting.png>
+Package pdftex.def Info: pics/ArraySorting.png used on input line 387.
+(pdftex.def)             Requested size: 219.4443pt x 183.30939pt.
+ [21
+
+] (./coding/sorting.cpp [22 <./pics/ArraySorting.png>]) [23]
+Bab 6.
+(./diktat.bbl [24
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 387.
- [22
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 416.
+ [25
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 387.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 416.
  (./diktat.aux (./pengantar.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 387.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 387.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 416.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 416.
 Package rerunfilecheck Info: File `diktat.out' has not changed.
-(rerunfilecheck)             Checksum: 03F07166EF1EDB7F4F66DB86A6A9BBC2;1149.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 387.
+(rerunfilecheck)             Checksum: 677D61A0DC816995A3D6C51FB8CC73F6;1524.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 416.
  ) 
 Here is how much of TeX's memory you used:
- 12374 strings out of 493029
- 180501 string characters out of 6136234
- 338657 words of memory out of 5000000
- 15160 multiletter control sequences out of 15000+600000
+ 12443 strings out of 493029
+ 181493 string characters out of 6136234
+ 338783 words of memory out of 5000000
+ 15176 multiletter control sequences out of 15000+600000
  11871 words of font info for 42 fonts, out of 8000000 for 9000
  1227 hyphenation exceptions out of 8191
  48i,9n,99p,1097b,1746s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exi
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
 , replaced by a fixed one
@@ -806,10 +819,10 @@ nts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmtt12.pfb>
-Output written on diktat.pdf (27 pages, 590112 bytes).
+Output written on diktat.pdf (31 pages, 639745 bytes).
 PDF statistics:
- 905 PDF objects out of 1000 (max. 8388607)
- 831 compressed objects within 9 object streams
- 431 named destinations out of 1000 (max. 500000)
- 206 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1022 PDF objects out of 1200 (max. 8388607)
+ 942 compressed objects within 10 object streams
+ 480 named destinations out of 1000 (max. 500000)
+ 259 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -13,7 +13,7 @@ struct AdjList {
 
 class Graph {
 	private:
-		int V;
+		int V; 
 		struct AdjList* array;
 	public:
 		Graph(int V) {
@@ -60,6 +60,7 @@ int main() {
 	gh.addEdge(1, 4);
 	gh.addEdge(2, 3);
 	gh.addEdge(3, 4);
+	gh.addEdge(2, 0);
 	gh.printGraph();
 	return 0;
 }

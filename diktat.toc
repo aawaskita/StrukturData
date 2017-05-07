@@ -1,9 +1,9 @@
 \select@language {bahasai}
 \select@language {bahasai}
 \contentsline {chapter}{Daftar Isi}{i}{chapter*.2}
-\contentsline {chapter}{Daftar Gambar}{ii}{chapter*.3}
-\contentsline {chapter}{Daftar Program}{ii}{section*.4}
-\contentsline {chapter}{\uppercase {Kata Pengantar}}{iii}{section*.6}
+\contentsline {chapter}{Daftar Gambar}{iii}{chapter*.3}
+\contentsline {chapter}{Daftar Program}{iii}{section*.4}
+\contentsline {chapter}{\uppercase {Kata Pengantar}}{iv}{section*.6}
 \select@language {bahasai}
 \select@language {bahasai}
 \contentsline {chapter}{\numberline {1}Pendahuluan}{1}{chapter.1}
@@ -20,5 +20,11 @@
 \contentsline {section}{\numberline {3.2}\textit {Linked list}}{14}{section.3.2}
 \contentsline {chapter}{\numberline {4}\textit {Graph}}{18}{chapter.4}
 \contentsline {section}{\numberline {4.1}Pendahuluan}{18}{section.4.1}
-\contentsline {chapter}{\numberline {5}Tugas}{21}{chapter.5}
-\contentsline {chapter}{Bibliografi}{22}{chapter*.16}
+\contentsline {section}{\numberline {4.2}Contoh Program}{19}{section.4.2}
+\contentsline {chapter}{\numberline {5}Pengurutan (\textit {Sorting})}{21}{chapter.5}
+\contentsline {section}{\numberline {5.1}Pendahuluan}{21}{section.5.1}
+\contentsline {section}{\numberline {5.2}\textit {Bubble sort}}{22}{section.5.2}
+\contentsline {section}{\numberline {5.3}\textit {Selection Sort}}{23}{section.5.3}
+\contentsline {section}{\numberline {5.4}\textit {Quick Sort}}{23}{section.5.4}
+\contentsline {chapter}{\numberline {6}Tugas}{24}{chapter.6}
+\contentsline {chapter}{Bibliografi}{25}{chapter*.17}

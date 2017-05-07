@@ -252,6 +252,12 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT coding/adjList.cpp
 INPUT coding/adjList.cpp
 INPUT coding/adjList.cpp
+INPUT pics/ArraySorting.png
+INPUT ./pics/ArraySorting.png
+INPUT ./pics/ArraySorting.png
+INPUT coding/sorting.cpp
+INPUT coding/sorting.cpp
+INPUT coding/sorting.cpp
 INPUT diktat.bbl
 INPUT diktat.bbl
 INPUT diktat.aux
