@@ -25,6 +25,6 @@
 \contentsline {section}{\numberline {5.1}Pendahuluan}{21}{section.5.1}
 \contentsline {section}{\numberline {5.2}\textit {Bubble sort}}{22}{section.5.2}
 \contentsline {section}{\numberline {5.3}\textit {Selection Sort}}{23}{section.5.3}
-\contentsline {section}{\numberline {5.4}\textit {Quick Sort}}{23}{section.5.4}
-\contentsline {chapter}{\numberline {6}Tugas}{24}{chapter.6}
-\contentsline {chapter}{Bibliografi}{25}{chapter*.17}
+\contentsline {section}{\numberline {5.4}\textit {Quick Sort}}{24}{section.5.4}
+\contentsline {chapter}{\numberline {6}Tugas}{27}{chapter.6}
+\contentsline {chapter}{Bibliografi}{28}{chapter*.18}

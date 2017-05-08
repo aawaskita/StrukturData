@@ -258,6 +258,16 @@ INPUT ./pics/ArraySorting.png
 INPUT coding/sorting.cpp
 INPUT coding/sorting.cpp
 INPUT coding/sorting.cpp
+INPUT coding/selection.cpp
+INPUT coding/selection.cpp
+INPUT coding/selection.cpp
+INPUT pics/quicksort.png
+INPUT ./pics/quicksort.png
+INPUT ./pics/quicksort.png
+INPUT coding/quick.cpp
+INPUT coding/quick.cpp
+INPUT coding/quick.cpp
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT diktat.bbl
 INPUT diktat.bbl
 INPUT diktat.aux
@@ -283,6 +293,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb

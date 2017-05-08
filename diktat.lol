@@ -5,3 +5,5 @@
 \contentsline {lstlisting}{\numberline {3.2}linkedList.cpp}{14}{lstlisting.3.2}
 \contentsline {lstlisting}{\numberline {4.1}adjList.cpp}{19}{lstlisting.4.1}
 \contentsline {lstlisting}{\numberline {5.1}sorting.cpp}{22}{lstlisting.5.1}
+\contentsline {lstlisting}{\numberline {5.2}selection.cpp}{23}{lstlisting.5.2}
+\contentsline {lstlisting}{\numberline {5.3}quicksort.cpp}{25}{lstlisting.5.3}
