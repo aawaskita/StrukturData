@@ -26,5 +26,9 @@
 \contentsline {section}{\numberline {5.2}\textit {Bubble sort}}{22}{section.5.2}
 \contentsline {section}{\numberline {5.3}\textit {Selection Sort}}{23}{section.5.3}
 \contentsline {section}{\numberline {5.4}\textit {Quick Sort}}{24}{section.5.4}
-\contentsline {chapter}{\numberline {6}Tugas}{27}{chapter.6}
-\contentsline {chapter}{Bibliografi}{28}{chapter*.18}
+\contentsline {chapter}{\numberline {6}Pencarian (\textit {Searching})}{27}{chapter.6}
+\contentsline {section}{\numberline {6.1}Pendahuluan}{27}{section.6.1}
+\contentsline {section}{\numberline {6.2}Pencarian linier}{27}{section.6.2}
+\contentsline {section}{\numberline {6.3}Pencarian biner}{29}{section.6.3}
+\contentsline {chapter}{\numberline {7}Tugas}{31}{chapter.7}
+\contentsline {chapter}{Bibliografi}{32}{chapter*.18}

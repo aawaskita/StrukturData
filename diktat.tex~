@@ -392,15 +392,32 @@ Dalam operasi \textit{sorting} efisiensi dalam waktu eksekusi lebih penting dari
 Secara praktis, operasi \textit{sorting} tidak dapat dilakukan pada semua data. Sebagai contoh adalah struktur data \textit{queue} yang terurut berdasarkan waktu kedatangan. Dengan demikian, tidak beralasan untuk mengurutkannya berdasarkan kriteria lain seperti alfabet atau alfanumerik. Tetapi, operasi \textit{sorting} beralsan untuk dilakukan dalam kondisi jumlah elemen yang berubah sepanjang eksekusi. Sebagai contoh adalah pengurutan nomor kontak tadi. Karena itu, pengurutanpun harus dapat dilakukan di struktur data dinamis seperti \textit{linked list}. 
 
 \section{\textit{Bubble sort}}
-Teknik ini adalah teknik yang sangat sederhana, yaitu dengan melakukan evaluasi pada dua elemen yang posisinya berurutan. Jika keduanya belum terurut, urutkan. Jika keduanya telah terurut, pindah ke posisi dua elemen berikutnya. Perhatikan contoh dalam Program \ref{bubble} berikut.
+Teknik ini adalah teknik yang sangat sederhana, yaitu dengan melakukan evaluasi pada dua elemen yang posisinya berurutan. Jika keduanya belum terurut, urutkan. Jika keduanya telah terurut, pindah ke posisi dua elemen berikutnya. Perhatikan contoh dalam Program \ref{bubble} berikut. Perhatikan baris ke-19 dan 21. Perulangan yang dilakukan untuk mengurutkan elemen array membutuhkan kompleksitas algoritma sama dengan $\Theta(n^2)$.
 
 \scriptsize
 \lstinputlisting[language=c++, numbers=left, numberstyle=\tiny, caption=sorting.cpp, showstringspaces=false, label=bubble]{coding/sorting.cpp}
 \normalsize
 
 \section{\textit{Selection Sort}}
+Teknik pengurutan ini juga sederhana dan mirip dengan pengurutan \textit{bubble}. Terdiri dari dua kali \textit{looping} (baris ke-15 sebagai \textit{loop} terluar dan baris ke-17 sebagai \textit{loop} terdalam) serta mengasumsikan bahwa elemen terkecil terletak di elemen pertama (baris ke-16), algoritma ini berusaha untuk mencari nilai terkecil pada setiap \textit{loop}. Di akhir \textit{loop} terdalam, nilai elemen array ditukar, antara elemen pertama dengan posisi elemen di mana nilai terkecil ditemukan. Perhatikan baris ke-22, fungsi \texttt{swap} telah didefinisikan dalam \texttt{std} sehingga tidak terlihat deklarasi fungsinya. Harap berhati-hati dalam menggunakan pernyataan pada baris ke-4 jika kita berencana membuat fungsi dengan tugas yang dengan fungsi \texttt{swap} karena ada potensi penggunaan nama yang sama dan menyebabkan kesalahan. \textit{Loop} kemudian dilanjutkan karena di setiap tahap, komparasi dilakukan hanya dengan satu elemen saja. Program \ref{selection}\footnote{\url{http://www.sanfoundry.com/cplusplus-program-implement-selection-sort/}} mengilustrasikan algoritma pengurutan \textit{selection}.
+
+\scriptsize
+\lstinputlisting[language=c++, numbers=left, numberstyle=\tiny, caption=selection.cpp, showstringspaces=false, label=selection]{coding/selection.cpp}
+\normalsize
 
 \section{\textit{Quick Sort}}
+Sedikit berbeda dengan dua pendekatan \textit{sorting} sebelumnya, \textit{quick sort} melakukan dua perbandingan di setiap tahapnya. Acuan perbandingan dipilih sembarang, umumnya dari elemen yang posisinya di tengah dan disebut sebagai nilai \textit{pivot}. Perbandingan terhadap nilai \textit{pivot} dilakukan oleh elemen pertama (\texttt{i}) dan terakhir (\texttt{j}) dari array. Pertukaran dilakukan sedemikian sehingga terbentuk \texttt{array[i] < pivot < array[j]}. Posisi \texttt{i} digeser ke kanan (ke arah yang target nilainya semakin besar) sedangkan posisi \texttt{j} ke kiri. Tahapan pambandingan berakhir setelah jika posisi \texttt{i} sudah lebih besar daripada \texttt{j}. Tahapan yang sama kembali dilakukan secara rekursif. Gambar \ref{fig:quick}\footnote{\url{http://www.algolist.net/Algorithms/Sorting/Quicksort}} mengilustrasikan algoritma ini. Sedangkan Program \ref{quick} menunjukkan penerapannya.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.45]{pics/quicksort.png}
+\caption{Ilustrasi algoritma \textit{quick sort}}
+\label{fig:quick}
+\end{figure}
+
+\scriptsize
+\lstinputlisting[language=c++, numbers=left, numberstyle=\tiny, caption=quicksort.cpp, showstringspaces=false, label=quick]{coding/quick.cpp}
+\normalsize
 
 \chapter{Tugas}
 Di kesempatan perkuliahan ini, mahasiswa diminta untuk membuat tulisan di blog dan media lainnya yang dapat diakses secara publik via internet. Tulisannya seputar penerapan struktur data dalam bahasa pemrograman, salah satunya \texttt{C++} yang telah dipelajari. Tulisan harus memiliki aspek berikut.

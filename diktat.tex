@@ -419,6 +419,30 @@ Sedikit berbeda dengan dua pendekatan \textit{sorting} sebelumnya, \textit{quick
 \lstinputlisting[language=c++, numbers=left, numberstyle=\tiny, caption=quicksort.cpp, showstringspaces=false, label=quick]{coding/quick.cpp}
 \normalsize
 
+\chapter{Pencarian (\textit{Searching})}
+\section{Pendahuluan}
+Pencarian suatu data dalam struktur tertentu proses mengunjungi satu per satu elemen struktur dan membandingkan isinya dengan kriteria pencarian. Apa yang dicari bisa berupa sesuatu yang sudah pasti (sebuah nilai tertentu) atau sesuatu dengan kondisi (nilai terbesar, terkecil, dll). Mengunjungi elemen struktur akan mudah dilakukan pada array karena sudah terindeks. Tetapi, jika jumlah elemennya dinamis, setiap kali akan dilakukan, pencarian harus secara sekuensial dilakukan dari pointer terdepan. 
+
+\section{Pencarian linier}
+Ini adalah teknik pencarian yang paling sederhana. Elemen yang akan dicari dirunut dari posisi terdepan untuk kemudian dibandingkan dengan elemen pada setiap posisi yang dikunjungi. Jika sesuai pencarian selesai. Pencarian jenis ini dapat dilakukan pada array maupun \textit{linked list}. 
+
+Program \ref{linier} menunjukkan pencarian sebuah elemen dalam \textit{linked list}. Program tersebut membuat sebuah \textit{linked list} sejumlah 10 elemen (baris ke-19 s/d 50). Untuk kemudian melakukan pencarian nilai tertentu (15) yang dimulai dari elemen pertama (baris ke-52 s/d 67). Jika nilai yang dicari ditemukan, lokasi elemen akan dikembalikan (baris ke-58) dan \textit{looping} dalam \texttt{while} selesai (baris ke-59). Sebaliknya, jika elemen tidak ditemukan, fungsi ini akan mengembalikan nilai \texttt{-1}. Nilai ini sebagai penanda saja karena sudah diketahui sebelumnya bahwa data yang tersimpan dalam \textit{linked list} semuanya bernilai positif.
+
+\scriptsize
+\lstinputlisting[language=c++, numbers=left, numberstyle=\tiny, caption=linear.cpp, showstringspaces=false, label=linier]{coding/linear.cpp}
+\normalsize
+
+\section{Pencarian biner}
+Pencarian juga sering dikaitkan dengan proses pengurutan karena pencarian pada data terurut bisa jadi lebih cepat. Pencarian biner pada data terurut hanya akan melakukan pencarian pada daerah yang potensial. Sedangkan penentuan daerah pencarian yang potensial dilakukan dengan membagi data menjadi dua, masing-masing berupa data-data yang nilainya lebih kecil dan lebih besar daripada nilai median (nilai yang ada di posisi tengah). Program \ref{bsearch} menunjukkan penerapan dari teknik pencarian ini dengan bantuan \textit{quick sort} untuk mengurutkan. Pencarian dilakukan pada array dengan \texttt{10} elemen.
+
+Nilai pada posisi tengah ditentukan oleh variabel \texttt{middle} (baris ke-50). Kemudian, pencarian dimulai dengan membandingkan nilai pada posisi tengah dengan nilai yang dicari. Jika nilai yang dicari lebih besar daripada nilai pada posisi tengah, maka nilai yang dicari pasti berada di setengah bagian kedua dari daftar nilai. Itu sebabnya, nilai \texttt{first} yang berperan sebagai \textit{pointer} awal diperbarui nilainya menjadi sama dengan nilai tengah ditambah \texttt{1} (baris ke-53). Ini menunjukkan bahwa kita hanya akan melakukan pencarian di setengah bagian data kedua.
+
+Sebaliknya, jika nilai yang dicari lebih kecil daripada nilai di posisi tengah, maka nilai yang dicari pasti berada pada setengah bagian data pertama. Itu sebabnya, nilai last diperbarui nilainya menjadi sama dengan nilai tengah dikurangi \texttt{1} (baris ke-60). Selanjutnya, nilai middle diperbarui setelah pembaruan \texttt{first} atau \texttt{last} (baris ke-62). Dan pencarianpun dilakukan kembali dengan nilai \texttt{middle} dan \texttt{first} atau \texttt{last} yang baru. Tetapi, jika nilai yang dicari ternyata ada pada posisi tengah maka posisi tersebut akan dilaporkan (baris ke-56).
+
+\scriptsize
+\lstinputlisting[language=c++, numbers=left, numberstyle=\tiny, caption=binarysearch.cpp, showstringspaces=false, label=bsearch]{coding/bsearch.cpp}
+\normalsize
+
 \chapter{Tugas}
 Di kesempatan perkuliahan ini, mahasiswa diminta untuk membuat tulisan di blog dan media lainnya yang dapat diakses secara publik via internet. Tulisannya seputar penerapan struktur data dalam bahasa pemrograman, salah satunya \texttt{C++} yang telah dipelajari. Tulisan harus memiliki aspek berikut.
 \begin{enumerate}

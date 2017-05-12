@@ -7,3 +7,5 @@
 \contentsline {lstlisting}{\numberline {5.1}sorting.cpp}{22}{lstlisting.5.1}
 \contentsline {lstlisting}{\numberline {5.2}selection.cpp}{23}{lstlisting.5.2}
 \contentsline {lstlisting}{\numberline {5.3}quicksort.cpp}{25}{lstlisting.5.3}
+\contentsline {lstlisting}{\numberline {6.1}linear.cpp}{27}{lstlisting.6.1}
+\contentsline {lstlisting}{\numberline {6.2}binarysearch.cpp}{29}{lstlisting.6.2}
